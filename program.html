@@ -149,126 +149,131 @@
 
   <!-- 10:30 - 12:00pm : session1 (75min: 15x4 + 15) -->
   <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
-  <h3> 10:30am - 12:00pm Technical Session 1 - Binary Rewriting and Transformation </h3>
+  <h3> 10:30am - 12:00pm Technical Session 1 - Binary Rewriting and Transformation (TBD:3 talks?) </h3>
 
   <p>Session/Discussion Lead: TBD <em>(TBD)</em></p>
   <p>Room: TBD </p>
   </li>
-  <li class="hidden">Technical Session 1 - Binary Analysis and Transformation (TBD:3 talks?) </li>
+  <li class="hidden">Technical Session 1 - Binary Analysis and Transformation </li>
 
   <li data-icon="false" class="prog-item prog-friday">
-  <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
-    <h4>
-      <div style="width: 78%">
-        <p class="paper-header">
-            Making Break-ups Less Painful: Source-level Support for Transforming Legacy Software into a Network of Tasks
-        </p>
-        <p>
-
-            Nik Sultana <em>(University of Pennsylvania)</em>;
-                Achala Rao <em>(University of Pennsylvania)</em>;
-                Zihao Jin <em>(Tsinghua University)</em>;
-                Pardis Pashakhanloo <em>(University of Pennsylvania)</em>;
-                Henry Zhu <em>(University of Pennsylvania)</em>;
-                Ke Zhong (<em>Shanghai Jiao Tong University)</em>;
-                Boon Thau Loo <em>(University of Pennsylvania)</em> 
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+                Clone-Slicer: Detecting Domain Specific Binary Code Clones through Program Slicing
+            </p>
+            <p>
+    
+                Hongfa Xue <em>(George Washington University)</em>;
+                    Guru Venkataramani <em>(George Washington University)</em>;
+                    Tian Lan <em>(George Washington University)</em>                
+            </p>
+          </div>
+          <div class="ui-li-aside">
+    
+            <div class="button-paper">
+              <a href="/papers/p9-hiserA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="/papers/p9-hiserA-slides.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+            </div>
+    
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p>
+                Detecting code clones is important for various software engineering development and debugging tasks. In particular, binary code clone detection can have significant uses in the context of legacy applications that are already deployed in several critical domains.
+                In this paper, we present an novel framework, Clone-Slicer, for identifying domain-specific binary code clones (e.g., pointer-related code) through program slicing. Our approach first eliminates non-domain-related instructions through program slicing, and then applies deep learning-based algorithm to model code samples as numerical vectors for the remaining binary instructions. We then use clustering algorithms to aggregate code clones, and use formal analysis to verify validity of code clones. Our experimental results show the Clone-Slicer can swiftly identify up tp 43.64\% code clones and cut the time-to-solution by 32.96\% compared to previously proposed code clone detectors.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+ 
+      
+  <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+                BinRec: Attack Surface Reduction Through Dynamic Binary Recovery
+            </p>
+            <p>
+    
+                Taddeus Kroes <em>(Vrije Universiteit Amsterdam)</em>; 
+                    Anil Altinay <em>(University of California, Irvine)</em>;
+                    Joseph Nash <em>(University of California, Irvine)</em>;
+                    Yeoul Na <em>(University of California, Irvine)</em>;
+                    Stijn Volckaert <em>(University of California, Irvine)</em>;
+                    Herbert Bos <em>(Vrije Universiteit Amsterdam)</em>; 
+                    Michael Franz <em>(University of California, Irvine)</em>;
+                    Cristiano Giuffrida <em>(Vrije Universiteit Amsterdam)</em>
+                    
+            </p>
+          </div>
+          <div class="ui-li-aside">
+    
+            <div class="button-paper">
+              <a href="/papers/p35-tianA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="/papers/p35-tianA-slides.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+            </div>
+    
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p>
+                Compile-time specialization and feature pruning through static binary rewriting have been proposed repeatedly as techniques for reducing the attack surface of large programs, and for minimizing the trusted computing base. We propose a new approach to attack surface reduction: dynamic binary lifting and recompilation.
+                We present BinRec, a binary recompilation framework that lifts binaries to a compiler-level intermediate representation (IR) to allow complex transformations on the captured code. After transformation, BinRec lowers the IR back to a “recovered” binary, which is semantically equivalent to the input binary, but does have its unnecessary features removed. Unlike existing approaches, which are mostly based on static analysis and rewriting, our framework analyzes and lifts binaries dynamically. The crucial advantage is that we can not only observe the full program including all of its dependencies, but we can also determine which program features the end-user actually uses. We evaluate the correctness and performance of BinRec, and show that our approach enables aggressive pruning of unwanted features in COTS binaries.
                 
-        </p>
+            <p>&nbsp;</p>
+          </li>
+        </ul>
       </div>
-      <div class="ui-li-aside">
-
-        <div class="button-paper">
-          <a href="/papers/p1-gopanA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
-        </div>
-        <div class="button-paper">
-          <a href="/papers/p1-gopanA-slides.pptx" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
-        </div>
-
-      </div>
-    </h4>
-    <ul data-role="listview" data-inset="false">
-      <li data-icon="false">
-        <p><b>Abstract: </b><p>
-            “Breaking up” software into a dataflow network of tasks can improve availability and performance by exploiting the flexibility of the resulting graph, more granular resource use, hardware concurrency and modern interconnects. Decomposing legacy systems in this manner is difficult and ad hoc however, raising such challenges as weaker consistency and potential data races. Thus it is difficult to build on battle-tested legacy systems.
-            We propose a paradigm and supporting tools for developers to recognize task-level modularity opportunities in software. We use the Apache web server as an example of legacy software to test our ideas. This is a stepping stone towards realizing a vision where automated decision-support tools assist in the decomposition of systems to improve the reuse of components, meet performance targets or exploit new hardware devices and topologies.
-        <p>&nbsp;</p>
       </li>
-    </ul>
-  </div>
-  </li>
-
-  <li data-icon="false" class="prog-item prog-friday">
-  <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
-    <h4>
-      <div style="width: 78%">
-        <p class="paper-header">
-            Clone-Slicer: Detecting Domain Specific Binary Code Clones through Program Slicing
-        </p>
-        <p>
-
-            Hongfa Xue <em>(George Washington University)</em>;
-                Guru Venkataramani <em>(George Washington University)</em>;
-                Tian Lan <em>(George Washington University)</em>                
-        </p>
+    
+      <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+                Towards Interface-Driven COTS Binary Hardening
+            </p>
+            <p>
+                Xiaoyang Xu <em>(University of Texas at Dallas)</em>; 
+                    Wenhao Wang <em>(University of Texas at Dallas)</em>; 
+                    Kevin W. Hamlen <em>(University of Texas at Dallas)</em>; 
+                    Zhiqiang Lin <em>(Ohio State University)</em>                
+            </p>
+          </div>
+          <div class="ui-li-aside">
+    
+            <div class="button-paper">
+              <a href="/papers/p43-wangA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="/papers/p43-wangA-slides.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+    
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p>
+                This paper considers the problem of hardening COTS binary software products (e.g., via control-flow integrity and/or software fault isolation defenses) in contexts where the surrounding software environment includes closed-source, unmodifiable, and possibly obfuscated binary components, such as system libraries, OS kernels, and virtualization layers. We demonstrate that many code hardening algorithms, when applied only to the user-level software products in such environments, leave open critical vulnerabilities that arise from mismatches between the application-agnostic security policies enforced by the system modules versus the application-specific policies enforced at the application layer.
+                To overcome this problem, we propose a modular approach for hardening application-level software in such environments without the need to harden all other software in the environment with exactly the same protection strategy or policies. Our approach embeds application-level protections within objects shared by interoperating modules. Modules that obey their interface specifications therefore receive an appropriate granularity of protection automatically when they invoke shared object methods. Our experiences of developing and refining this approach for Microsoft Windows environments is discussed.
+                            
+           <p>&nbsp;</p>
+          </li>
+        </ul>
       </div>
-      <div class="ui-li-aside">
-
-        <div class="button-paper">
-          <a href="/papers/p9-hiserA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
-        </div>
-        <div class="button-paper">
-          <a href="/papers/p9-hiserA-slides.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
-        </div>
-
-      </div>
-    </h4>
-    <ul data-role="listview" data-inset="false">
-      <li data-icon="false">
-        <p><b>Abstract: </b><p>
-            Detecting code clones is important for various software engineering development and debugging tasks. In particular, binary code clone detection can have significant uses in the context of legacy applications that are already deployed in several critical domains.
-            In this paper, we present an novel framework, Clone-Slicer, for identifying domain-specific binary code clones (e.g., pointer-related code) through program slicing. Our approach first eliminates non-domain-related instructions through program slicing, and then applies deep learning-based algorithm to model code samples as numerical vectors for the remaining binary instructions. We then use clustering algorithms to aggregate code clones, and use formal analysis to verify validity of code clones. Our experimental results show the Clone-Slicer can swiftly identify up tp 43.64\% code clones and cut the time-to-solution by 32.96\% compared to previously proposed code clone detectors.
-        <p>&nbsp;</p>
       </li>
-    </ul>
-  </div>
-  </li>
-
-  <li data-icon="false" class="prog-item prog-friday">
-  <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
-    <h4>
-      <div style="width: 78%">
-        <p class="paper-header">
-            TOSS: Tailoring Online Server Systems through Binary Feature Customization
-        </p>
-        <p>
-            Yurong Chen <em>(George Washington University)</em>;
-                shaowen sun <em>(George Washington University)</em>;
-                Tian lan <em>(George Washington University)</em>;
-                Guru Venkataramani <em>(George Washington University)</em>                
-        </p>
-      </div>
-      <div class="ui-li-aside">
-
-        <div class="button-paper">
-          <a href="/papers/p17-majlesi-kupaeiA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
-        </div>
-        <div class="button-paper">
-          <a href="/papers/p17-majlesi-kupaeiA-slides.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
-        </div>
-
-      </div>
-    </h4>
-    <ul data-role="listview" data-inset="false">
-      <li data-icon="false">
-        <p><b>Abstract: </b><p>
-            Network-based models are increasingly adopted to deliver key software service and utilities (e.g., data storage, search, and processing) to end users. The need to satisfy diverse user requirements and to fit different application environment often leads to continual expansion and addition of new (and in many cases excessive) features, known as the feature creep problem. Existing work mitigating feature bloat often either debloats programs at source code level (which may not always be available, in particular for legacy systems) or customize binary only with respect to very limited scope of inputs. In this paper, we propose a new approach, TOSS , for automated customization of online servers and software systems, which are implemented using a client-server architecture based on the underlying network protocols. Specifically, TOSS harnesses program tracing and tainting-guided symbolic execution to identify desired (feature-related) code from the original program binary, and apply static binary rewriting to remove redundant features and directly create customized program binary with only desired features. We implement a prototype of TOSS and evaluate its feasibility using real-world executables including Mosquitto, which relies on the Message Queuing Telemetry Transport (MQTT) protocol for lightweight Internet of Things (IoT) communications. The results show that TOSS is able to create a functional program binary with only desired features and significantly reduce potential attack surface by eliminating undesired protocol/program features.
-
-        <p>&nbsp;</p>
-      </li>
-    </ul>
-  </div>
-  </li>
-
+    
+ 
 <!-- 12:00 -  1:30pm : lunch -->
   <li class="ui-li ui-bar-b prog-item ui-li-divider prog-friday   " data-role="list-divider">
     <h3> 12:00pm - 1:30pm Lunch </h3>
@@ -279,7 +284,7 @@
 
 <!-- 1:30 -  3:00pm : session2 (90min: 45 + 15x2 + 15) -->
   <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
-  <h3> 01:30pm - 03:30pm Invited Talk 2 and Technical Session 2 </h3>
+  <h3> 01:30pm - 02:30pm Invited Talk 2 </h3>
 
   <p>Session/Discussion Lead: TBD <em>(TBD)</em></p>
   <p>Room: TBD</p>
@@ -317,88 +322,93 @@
       <p>&nbsp;</p>
     </li>
 
-
-  <li class="hidden">Technical Session 2 - Hardening Networked Systems (TBD: 2 talks?) </li>
-
-  <li data-icon="false" class="prog-item prog-friday">
-  <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
-    <h4>
-      <div style="width: 78%">
-        <p class="paper-header">
-            BinRec: Attack Surface Reduction Through Dynamic Binary Recovery
-        </p>
-        <p>
-
-            Taddeus Kroes <em>(Vrije Universiteit Amsterdam)</em>; 
-                Anil Altinay <em>(University of California, Irvine)</em>;
-                Joseph Nash <em>(University of California, Irvine)</em>;
-                Yeoul Na <em>(University of California, Irvine)</em>;
-                Stijn Volckaert <em>(University of California, Irvine)</em>;
-                Herbert Bos <em>(Vrije Universiteit Amsterdam)</em>; 
-                Michael Franz <em>(University of California, Irvine)</em>;
-                Cristiano Giuffrida <em>(Vrije Universiteit Amsterdam)</em>
-                
-        </p>
-      </div>
-      <div class="ui-li-aside">
-
-        <div class="button-paper">
-          <a href="/papers/p35-tianA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
-        </div>
-        <div class="button-paper">
-          <a href="/papers/p35-tianA-slides.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
-        </div>
-
-      </div>
-    </h4>
-    <ul data-role="listview" data-inset="false">
-      <li data-icon="false">
-        <p><b>Abstract: </b><p>
-            Compile-time specialization and feature pruning through static binary rewriting have been proposed repeatedly as techniques for reducing the attack surface of large programs, and for minimizing the trusted computing base. We propose a new approach to attack surface reduction: dynamic binary lifting and recompilation.
-            We present BinRec, a binary recompilation framework that lifts binaries to a compiler-level intermediate representation (IR) to allow complex transformations on the captured code. After transformation, BinRec lowers the IR back to a “recovered” binary, which is semantically equivalent to the input binary, but does have its unnecessary features removed. Unlike existing approaches, which are mostly based on static analysis and rewriting, our framework analyzes and lifts binaries dynamically. The crucial advantage is that we can not only observe the full program including all of its dependencies, but we can also determine which program features the end-user actually uses. We evaluate the correctness and performance of BinRec, and show that our approach enables aggressive pruning of unwanted features in COTS binaries.
-            
-        <p>&nbsp;</p>
-      </li>
-    </ul>
-  </div>
-  </li>
+    <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
+        <h3> 2:30pm - 3:30pm Technical Session 1 - Hardening Networked Systems (TBD: 2 talks?) </h3>
+      
+        <p>Session/Discussion Lead: TBD <em>(TBD)</em></p>
+        <p>Room: TBD </p>
+        </li>
+      
+  <li class="hidden">Technical Session 2 - Hardening Networked Systems </li>
 
   <li data-icon="false" class="prog-item prog-friday">
-  <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
-    <h4>
-      <div style="width: 78%">
-        <p class="paper-header">
-            Towards Interface-Driven COTS Binary Hardening
-        </p>
-        <p>
-            Xiaoyang Xu <em>(University of Texas at Dallas)</em>; 
-                Wenhao Wang <em>(University of Texas at Dallas)</em>; 
-                Kevin W. Hamlen <em>(University of Texas at Dallas)</em>; 
-                Zhiqiang Lin <em>(Ohio State University)</em>                
-        </p>
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+                Making Break-ups Less Painful: Source-level Support for Transforming Legacy Software into a Network of Tasks
+            </p>
+            <p>
+    
+                Nik Sultana <em>(University of Pennsylvania)</em>;
+                    Achala Rao <em>(University of Pennsylvania)</em>;
+                    Zihao Jin <em>(Tsinghua University)</em>;
+                    Pardis Pashakhanloo <em>(University of Pennsylvania)</em>;
+                    Henry Zhu <em>(University of Pennsylvania)</em>;
+                    Ke Zhong (<em>Shanghai Jiao Tong University)</em>;
+                    Boon Thau Loo <em>(University of Pennsylvania)</em> 
+                    
+            </p>
+          </div>
+          <div class="ui-li-aside">
+    
+            <div class="button-paper">
+              <a href="/papers/p1-gopanA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="/papers/p1-gopanA-slides.pptx" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+            </div>
+    
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p>
+                “Breaking up” software into a dataflow network of tasks can improve availability and performance by exploiting the flexibility of the resulting graph, more granular resource use, hardware concurrency and modern interconnects. Decomposing legacy systems in this manner is difficult and ad hoc however, raising such challenges as weaker consistency and potential data races. Thus it is difficult to build on battle-tested legacy systems.
+                We propose a paradigm and supporting tools for developers to recognize task-level modularity opportunities in software. We use the Apache web server as an example of legacy software to test our ideas. This is a stepping stone towards realizing a vision where automated decision-support tools assist in the decomposition of systems to improve the reuse of components, meet performance targets or exploit new hardware devices and topologies.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
       </div>
-      <div class="ui-li-aside">
-
-        <div class="button-paper">
-          <a href="/papers/p43-wangA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
-        </div>
-        <div class="button-paper">
-          <a href="/papers/p43-wangA-slides.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
-        </div>
-
-      </div>
-    </h4>
-    <ul data-role="listview" data-inset="false">
-      <li data-icon="false">
-        <p><b>Abstract: </b><p>
-            This paper considers the problem of hardening COTS binary software products (e.g., via control-flow integrity and/or software fault isolation defenses) in contexts where the surrounding software environment includes closed-source, unmodifiable, and possibly obfuscated binary components, such as system libraries, OS kernels, and virtualization layers. We demonstrate that many code hardening algorithms, when applied only to the user-level software products in such environments, leave open critical vulnerabilities that arise from mismatches between the application-agnostic security policies enforced by the system modules versus the application-specific policies enforced at the application layer.
-            To overcome this problem, we propose a modular approach for hardening application-level software in such environments without the need to harden all other software in the environment with exactly the same protection strategy or policies. Our approach embeds application-level protections within objects shared by interoperating modules. Modules that obey their interface specifications therefore receive an appropriate granularity of protection automatically when they invoke shared object methods. Our experiences of developing and refining this approach for Microsoft Windows environments is discussed.
-                        
-       <p>&nbsp;</p>
       </li>
-    </ul>
-  </div>
-  </li>
+    
+    
+      <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+                TOSS: Tailoring Online Server Systems through Binary Feature Customization
+            </p>
+            <p>
+                Yurong Chen <em>(George Washington University)</em>;
+                    shaowen sun <em>(George Washington University)</em>;
+                    Tian lan <em>(George Washington University)</em>;
+                    Guru Venkataramani <em>(George Washington University)</em>                
+            </p>
+          </div>
+          <div class="ui-li-aside">
+    
+            <div class="button-paper">
+              <a href="/papers/p17-majlesi-kupaeiA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="/papers/p17-majlesi-kupaeiA-slides.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+            </div>
+    
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p>
+                Network-based models are increasingly adopted to deliver key software service and utilities (e.g., data storage, search, and processing) to end users. The need to satisfy diverse user requirements and to fit different application environment often leads to continual expansion and addition of new (and in many cases excessive) features, known as the feature creep problem. Existing work mitigating feature bloat often either debloats programs at source code level (which may not always be available, in particular for legacy systems) or customize binary only with respect to very limited scope of inputs. In this paper, we propose a new approach, TOSS , for automated customization of online servers and software systems, which are implemented using a client-server architecture based on the underlying network protocols. Specifically, TOSS harnesses program tracing and tainting-guided symbolic execution to identify desired (feature-related) code from the original program binary, and apply static binary rewriting to remove redundant features and directly create customized program binary with only desired features. We implement a prototype of TOSS and evaluate its feasibility using real-world executables including Mosquitto, which relies on the Message Queuing Telemetry Transport (MQTT) protocol for lightweight Internet of Things (IoT) communications. The results show that TOSS is able to create a functional program binary with only desired features and significantly reduce potential attack surface by eliminating undesired protocol/program features.
+    
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+    
 
 
   </ul>
