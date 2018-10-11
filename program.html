@@ -114,7 +114,7 @@
 
   <!-- keynote -->
   <li data-icon="false" class="prog-item prog-friday prog-keynote">
-    <h2 style="width: 85%"> Invited Talk 1: TBD </h2>
+    <h2 style="width: 85%"> Invited Talk: System Debloating via Compile-time Configuration and Hybrid Binary Rewriting </h2>
 
     <div class="ui-li-aside">
       <div class="button-paper">
@@ -123,19 +123,45 @@
     </div>
 
     <p style="width: 85%">
-      TBD <em>(TBD)</em><br/>
+      Hong Hu <em>(Georgia Institute of Technology)</em><br/>
     </p>
 
     <hr class="keynote-divider" />
     <p>
-      <b>Abstract: </b> TBD      
+      <b>Abstract: </b> Current practice of software development leads to bloated programs
+      with excessive features unneeded by end users. In this talk, I will
+      present our recent work on debloating system kernels and user space
+      programs. For the system kennel, we examine the effectiveness of
+      debloating through compile-time configuration. We figure out that
+      existing configuration system provides a convenient mechanism to
+      reduce the attack surface, but requires fine-grained configurations
+      for flexible debloating. For user space applications without a
+      well-defined configuration system, we build a binary rewriting
+      framework to remove unnecessary functionalities and insert security
+      checks. Our method utilizes dynamic instrumentation to reliably
+      collect execution traces, and relies on the static instrumentation to
+      avoid expensive runtime overhead. At the end of the talk, I will
+      discuss the relationships between software debloating and other
+      defense mechanisms, like control-flow integrity and software-based
+      fault isolation.
+            
 
     </p>
     <p>&nbsp;</p>
 
     <p>
       <!--img class="keynote-photo" src="/images/speakers/vikram.png"/ -->
-      <b>Bio: </b> TBD
+      <b>Bio: </b> Dr. Hong Hu is a postdoctoral fellow in the School of Computer
+      Science, College of Computing, the Georgia Institute of Technology. He
+      received his Ph.D. degree in computer science from the National
+      University of Singapore in 2016, and his B.E. degree in information
+      security from the Huazhong University of Science and Technology in
+      2011. His main research area is system security, focusing on detecting
+      memory errors from C/C++ programs, exploring new attack vectors and
+      developing defense mechanisms to prevent exploits. His work has
+      appeared in top venues in system security (USENIX Security, IEEE
+      Security and Privacy, CCS, ICECCS and ESORICS). He received the Best
+      Paper Award from ICECCS 2014.
 
     </p>
     <p>&nbsp;</p>
