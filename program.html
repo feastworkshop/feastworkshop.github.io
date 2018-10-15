@@ -118,7 +118,7 @@
 
     <div class="ui-li-aside">
       <div class="button-paper">
-        <a href="/papers/allvm.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+        <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
       </div>
     </div>
 
@@ -199,10 +199,10 @@
           <div class="ui-li-aside">
     
             <div class="button-paper">
-              <a href="/papers/p9-hiserA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
             </div>
             <div class="button-paper">
-              <a href="/papers/p9-hiserA-slides.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
             </div>
     
           </div>
@@ -242,10 +242,10 @@
           <div class="ui-li-aside">
     
             <div class="button-paper">
-              <a href="/papers/p35-tianA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
             </div>
             <div class="button-paper">
-              <a href="/papers/p35-tianA-slides.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
             </div>
     
           </div>
@@ -279,7 +279,7 @@
           <div class="ui-li-aside">
     
             <div class="button-paper">
-              <a href="/papers/p43-wangA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
             </div>
             <div class="button-paper">
               <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
@@ -320,21 +320,34 @@
 
   <!-- Invited talk 2 -->
   <li data-icon="false" class="prog-item prog-friday prog-keynote">
-      <h2 style="width: 85%"> Invited Talk 2: TBD </h2>
+      <h2 style="width: 85%"> Invited Talk 2: Hiding PIN's Artifacts to Defeat Evasive Malware </h2>
   
       <div class="ui-li-aside">
         <div class="button-paper">
-          <a href="/papers/allvm.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+          <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
         </div>
       </div>
   
       <p style="width: 85%">
-        TBD <em>(TBD)</em><br/>
+        Mario Polino <em>(Politecnico di Milano)</em><br/>
       </p>
   
       <hr class="keynote-divider" />
       <p>
-        <b>Abstract: </b> TBD      
+        <b>Abstract: </b> 
+        Malware authors constantly develop new techniques in order to evade analysis systems. Previous works addressed attempts to evade analysis by means of anti-sandboxing and anti-virtualization techniques, for example proposing to run samples on bare-metal. However, state-of-the-art bare-metal tools fail to provide richness and completeness in the results of the analysis. In this context, Dynamic Binary Instrumentation (DBI) tools have become popular in the analysis of new malware samples because of the deep control they guarantee over the instrumented binary. In fact, in some specific scenarios (e.g., manual and automated reverse engineering) we need to fully monitor and control the analyzed binary.
+
+​
+
+As a consequence, malware authors developed new techniques, called anti-instrumentation, aimed at detecting if a sample is being instrumented. Such techniques look at the artifacts produced during the instrumentation process and leverage some intrinsic characteristics of a DBI tool.
+
+​
+
+We propose a practical approach to make DBI tools stealthier and resilient against anti-instrumentation attacks. We studied the common techniques used by malware to detect the presence of a DBI tool, and we proposed a set of countermeasures to defeat them. We implemented our approach in Arancino, on top of the Intel Pin framework. Arancino is able to hide Pin's artifacts making hard for malware to spot its presence. In order to achieve this, we leverage the power of DBI tools to fully control the execution flow of the instrumented process. This allows us to detect and dismantle possible evasion attempts. We tested our system against eXait, a tool containing a set of plugins that aim at detecting when a program is instrumented by Intel Pin, showing that Arancino is able to hide Intel Pin, allowing the analysis of evasive binaries.
+
+​
+
+Armed with Arancino, we then performed a large-scale measurement of the anti-instrumentation techniques employed by modern malware. We collected and analyzed 7,006 malware samples, monitoring the evasive behaviors that triggered our system, hence studying the common techniques adopted by modern malware authors to perform evasion of instrumentation systems.      
   
       </p>
       <p>&nbsp;</p>
@@ -342,7 +355,8 @@
       <p>
         <!--img class="keynote-photo" src="/images/speakers/vikram.png"/ -->
 
-        <b>Bio: </b> TBD
+        <b>Bio: </b> 
+        Mario Polino received his Ph.D. from Politecnico di Milano in Italy, working at NECST laboratory as part of the Computer Security group inside Dipartimento di Elettronica, Informazione e Bioingegneria (DEIB). His main research revolve around malware analysis with a specific attention on behavioral analysis to assist malware analysts. He is interested in various computer security topics, and has worked on several topics ranging from cyber-physical systems to static binary analysis, going through Bank Fraud Analysis and Android Security. He loves playing Capture the Flag competitions, so he spend his free time playing.
   
       </p>
       <p>&nbsp;</p>
@@ -379,10 +393,10 @@
           <div class="ui-li-aside">
     
             <div class="button-paper">
-              <a href="/papers/p1-gopanA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
             </div>
             <div class="button-paper">
-              <a href="/papers/p1-gopanA-slides.pptx" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
             </div>
     
           </div>
@@ -416,10 +430,10 @@
           <div class="ui-li-aside">
     
             <div class="button-paper">
-              <a href="/papers/p17-majlesi-kupaeiA.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+              <a href="# onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
             </div>
             <div class="button-paper">
-              <a href="/papers/p17-majlesi-kupaeiA-slides.pdf" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
             </div>
     
           </div>
