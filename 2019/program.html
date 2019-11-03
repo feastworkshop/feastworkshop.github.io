@@ -65,7 +65,477 @@
 
       <div data-role="content" class="ui-content">
         <div class="content-primary">
-          <h1>Workshop Program (TBA)</h1>
+          <h1>Workshop Program</h1>
+<p>&nbsp;</p>
+
+
+<div id="prog_ctrl" data-role="navbar">
+  <ul>
+    <li><a href="#" onClick="filter('friday');" class="roundleft">Friday</a></li>
+  </ul>
+</div>
+
+<div id="program-program" class="program-program">
+  <ul class="program" data-role="listview" data-filter="true" data-inset="true" data-theme="d" data-dividertheme="a" placeholder="Filter program...">
+
+    <li class="prog-header prog-no-filter ui-bar-a prog-item prog-friday ui-li-static ui-body-inherit">
+      <h3>Friday, November 15, 2019</h3>
+    </li>
+
+    <li class="ui-li ui-bar-b prog-item ui-li-divider prog-friday ui-bar-d" data-role="list-divider" role="heading">
+      <h3>7:30am &ndash; 9:00am Breakfast &amp; Registration </h3>
+    </li>
+
+    <li class="hidden ui-li-static ui-body-inherit">Breakfast and Registration</li>
+
+    <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
+      <h3> 9:00am &ndash; 10:00am Keynote</h3>
+    </li>
+
+    <li class="hidden">Keynote</li>
+
+  <!-- keynote -->
+  <li data-icon="false" class="prog-item prog-friday prog-keynote">
+    <h2 style="width: 85%"> Keynote: Regaining Control Over COTS: Software &amp; Protocols</h2>
+
+	<!--
+    <div class="ui-li-aside">
+      <div class="button-paper">
+        <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+      </div>
+    </div>
+	-->
+
+    <p style="width: 85%">
+      Dr. J. Sukarno Mertoguno <em>(Georgia Tech Research Institute)</em><br/>
+    </p>
+
+    <hr class="keynote-divider" />
+    <p>
+      <b>Abstract: </b> The role of cyber infrastructure in modern
+      life are ubiquitous and pervasive. Software and protocols are
+      two of the main backbones of cyber infrastructure. Software and
+      protocols features and complexity is continuously growing over
+      time. Economic and engineering concerns have driven modern
+      software and protocols into complex, feature rich, and deeply
+      layered systems. One size fits all is the prevailing common of
+      the shelf (COTS) model of software and protocol distribution and
+      deployment, as it is the most economical way to maintain the
+      product from the producer and IT management point of view. This
+      model, however, is not optimal from cyber security point of
+      view. Complexity and deep layering provides abundant opportunity
+      for ‘weird machine’ to emerge, giving birth to myriads of
+      vulnerabilities, resulting in expansive attack surface. Beside
+      its is advantage in maintainability and simplifying production,
+      one size fits all COTS model also put the manufacturer rigidly
+      in control of customer’s software and protocols deployment and
+      feature sets. This has never been a problem, in the past, until
+      cyber security become an issue. Late stage software
+      transformation and customization provides an opportunity to
+      regain partial control over software and protocols feature sets
+      and hence attack surface. It can improve cyber security by
+      reducing unnecessary risks of software and protocol deployments.
+      In this talk, we will be discussing the progress and challenges
+      of late stage software and protocol customization.
+
+    </p>
+    <p>&nbsp;</p>
+
+    <p>
+      <b>Bio: </b> Dr. J. Sukarno Mertoguno serves as chief innovation
+      officer for the Information and Cyber Science Directorate (ICSD)
+      of Georgia Tech Research Institute (GTRI). Before joining GTRI,
+      he managed basic and applied science research in cyber security
+      and complex software for The Office of Naval Research (ONR)
+      where he developed several novel concepts and initiated many
+      innovative programs. Prior to ONR, he was a system &amp; chip
+      architect and an entrepreneur in San Francisco Bay Area, where
+      he worked on various chips and systems, such as embedded
+      processors, switching fabric, network processors, and various
+      other hardware accelerators, including TCP/IP, NFS, mobile
+      anti-malware, etc. He received his Ph.D. in electrical
+      engineering from SUNY-Binghamton. His education background
+      includes theoretical physics and electrical engineering.
+    </p>
+    <p>&nbsp;</p>
+  </li>
+
+  <!-- 10:00 - 10:45am : break1 -->
+  <li class="ui-li ui-bar-b prog-item ui-li-divider prog-friday   " data-role="list-divider">
+  <h3> 10:00am &ndash; 10:45am Coffee Break</h3>
+  </li>
+  <li class="hidden">Coffee Break</li>
+
+  <!-- 11:00 - 12:00pm : session1 (75min: 15x4 + 15) -->
+  <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
+  <h3> 11:00am &ndash; 12:00pm Session 1&mdash;Validation and Extraction</h3>
+<!--  <p>Session/Discussion Lead: Mayur Naik <em>(University of Pennsylvania)</em> </p> -->
+  </li>
+  <li class="hidden">Session 1&mdash;Validation and Extraction</li>
+
+  <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+                Source-free Machine-checked Validation of Native Code in Coq
+            </p>
+            <p>
+                Kevin W. Hamlen <em>(University of Texas at Dallas)</em>;
+                Dakota Fisher <em>(University of Texas at Dallas)</em>;
+                Gilmore R. Lundquist <em>(University of Texas at Dallas)</em>                
+            </p>
+          </div>
+          <div class="ui-li-aside">
+			<!--
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+            </div>
+			-->
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p>
+Picin&aelig; is an infrastructure for machine-proving properties of raw native coe programs without sources within the Coq program-proof co-development system. This facilitates formal reasoning about binary code that is inexpressible in source languages or for which no source code exists, such as hand-written assembly code or code resulting from binary transformations (e.g., binary hardening or debloating algorithms). Preliminary results validating some highly optimized, low-level subroutines for Intel and ARM architectures using this new framework are presented and discussed.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+ 
+      
+  <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+              Automated Finite State Machine Extraction
+            </p>
+            <p>
+			  Yongheng Chen <em>(NJU, Pennsylvania State University)</em>;
+			  Linhai Song <em>(Pennsylvania State University)</em>;
+			  Xinyu Xing <em>(Pennsylvania State University)</em>;
+			  Fengyuan Xu <em>(National Key Lab for Novel Software Technology, Nanjing University)</em>;
+			  Wenfei Wu <em>(Tsinghua University)</em>;
+            </p>
+          </div>
+          <div class="ui-li-aside">
+			<!--
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+            </div>
+			-->
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p> Finite state machine (FSM) is a
+type of computation models widely used in various software programs.
+Extracting implemented FSMs has many important applications in network, software engineering and security. In this paper, we first study
+how FSMs are implemented in real-world software. We then design a
+static analysis tool, FSMExtractor, to identify and synthesize
+implemented FSMs. Evaluation using 160 software programs shows that
+FSMExtractor can extract FSMs with good coverage and accuracy.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+    
+<!-- 12:00pm -  2:00pm : lunch -->
+  <li class="ui-li ui-bar-b prog-item ui-li-divider prog-friday   " data-role="list-divider">
+    <h3> 12:00pm &ndash; 2:00pm Lunch </h3>
+  </li>
+  <li class="hidden">Lunch</li>
+
+<!-- 2:00pm - 3:00pm : session2 -->
+  <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
+  <h3> 2:00pm &ndash; 3:00pm Session 2&mdash;Vulnerability Discovery and Repair</h3>
+<!--  <p>Session/Discussion Lead: Mayur Naik <em>(University of Pennsylvania)</em> </p> -->
+  </li>
+  <li class="hidden">Session 2&mdash;Vulnerability Discovery and Repair</li>
+
+  <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+              Inuring: Live Attacker-guided Repair
+            </p>
+            <p>
+			  Eric Schulte <em>(GrammaTech)</em>;
+			  Suan Yong <em>(GrammaTech)</em>;
+			  David Melski <em>(GrammaTech)</em>;
+            </p>
+          </div>
+          <div class="ui-li-aside">
+			<!--
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+            </div>
+			-->
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p> We present inuring, a method of
+live attacker-guided repair of software vulnerabilities. We illustrate
+inuring with an implementation in an N-variant system. When an
+N-variant system detects an attack by diverging it converts a grave
+vulnerability, such as one that enables remote code execution, into a
+less serious denial-of-service vulnerability; the attacker can
+repeatedly cause divergence, which crashes or forces a reset of the
+system. Inuring is a general technique that uses information gleaned
+from an attack to repair the underlying vulnerability, thereby
+mitigating the denial-of-service vulnerability. Our demonstration of
+inuring leverages a novel technique of secure memory layout in
+N-variant systems. We use a weak memory protection technique in each
+variant, but are able to guarantee strong protection and remediation
+for the n-variant system. We present a case study application of
+inuring to the Apache web server demonstrating the efficacy and
+efficiency of the technique.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+ 
+      
+  <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+              Exploring Effective Fuzzing Strategies to Analyze Communication Protocols
+            </p>
+            <p>
+			  Yurong Chen <em>(George Washington University)</em>;
+			  Tian lan <em>(George Washington University)</em>;
+			  Guru Venkataramani <em>(George Washington University)</em>;
+            </p>
+          </div>
+          <div class="ui-li-aside">
+			<!--
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+            </div>
+			-->
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p> While coverage-based greybox
+            fuzzing has gained great success in the field of
+            vulnerability detection due to its simplicity and
+            efficiency, it could become less powerful when applied
+            directly to protocol fuzzing due to the unique challenges
+            of protocol fuzzing. In particular, the communication
+            among multiple ends contains more than one packet, which
+            are not necessarily dependent upon each other, i.e.,
+            fuzzing single (usually the first) packet can only achieve
+            extremely limited code coverage. In this paper, we study
+            such challenges and demonstrate the limitation of current
+            non-stateful greybox fuzzer. In order to achieve higher
+            code coverage, we design and implement a stateful,
+            yield-drive protocol fuzzer, yFuzz, to explore the code
+            related to different protocol states. yFuzz is a stateful
+            fuzzer (which contains a state switching engine, together
+            with a multi-state forkserver) to consistently and
+            flexibly fuzz different states of an compiler-instrumented
+            protocol program. Our experimental results on OpenSSL show
+            that yFuzz achieves an improvement of 73% more code
+            coverage and 2X unique crashes when comparing against
+            fuzzing the first packet during a protocol handshake.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+
+
+<!-- 3:00pm -  3:45pm : Coffee Break -->
+  <li class="ui-li ui-bar-b prog-item ui-li-divider prog-friday   " data-role="list-divider">
+    <h3>3:00pm &ndash; 3:45pm Coffee Break</h3>
+  </li>
+  <li class="hidden">Coffee Break</li>
+
+  <!-- 4:00pm - 5:30pm : session3 -->
+    <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
+  <h3> 4:00pm &ndash; 5:30pm Session 3&mdash;Optimization and Specialization </h3>
+
+  <!-- <p>Session/Discussion Lead: Yan Shoshitaishvili <em>(Arizona State University)</em></p> -->
+  <li class="hidden">Session 3&mdash;Optimization and Specialization</li>
+
+  <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+              CodeMason: Binary-Level Profile-Guided Optimization
+            </p>
+            <p>
+			  David Williams-King <em>(Columbia University)</em>;
+			  Junfeng Yang <em>(Columbia University)</em>;
+            </p>
+          </div>
+          <div class="ui-li-aside">
+			<!--
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+            </div>
+			-->
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p> Optimizing a program for a
+			  specific machine or a specific workload is possible with
+			  today's compilers, but infrequently used, despite
+			  significant performance gains. We implement workload
+			  specialization, or Profile-Guided Optimization (PGO), at
+			  the binary level. Our system CodeMason runs on x86_64
+			  Linux. It performs static binary rewriting to obtain
+			  program profiles, then adjusts function ordering,
+			  alignment, and other binary-level details to achieve
+			  faster performance (particularly on the given workload).
+			  We obtain 1.7% average performance speedup on SPEC CPU
+			  2006, and 11.8% speedup in the best case. These
+			  substantial performance improvements suggest that
+			  binary-level PGO may be widely useful when
+			  compiler-based PGO is impossible because the source code
+			  is inaccessible.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+    
+      <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+              CARVE: Practical Security-Focused Software Debloating Using Simple Feature Set Mappings
+            </p>
+            <p>
+			  Michael Brown <em>(Georgia Tech Research Institute)</em>;
+			  Santosh Pande <em>(Georgia Tech)</em>;
+            </p>
+          </div>
+          <div class="ui-li-aside">
+			<!--
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+            </div>
+			-->
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p> Software debloating is an emerging
+field of study aimed at improving the security and performance of
+software by removing excess library code and features that are not
+needed by the end user (called bloat). Software bloat is pervasive,
+and several debloating techniques have been proposed to address this
+problem. While these techniques are effective at reducing bloat, they
+are not practical for the average user, risk creating unsound programs
+and introducing vulnerabilities, and are not well suited for
+debloating complex software such as network protocol implementations.
+In this paper, we propose CARVE, a simple yet effective
+security-focused debloating technique that overcomes these
+limitations. CARVE employs static source code annotation to map
+software features source code, eliminating the need for advanced
+software analysis during debloating and reducing the overall level of
+technical sophistication required by the user. CARVE surpasses
+existing techniques by introducing debloating with replacement, a
+technique capable of preserving software interoperability and
+mitigating the risk of creating an unsound program or introducing a
+vulnerability. We evaluate CARVE in 12 debloating scenarios and
+demonstrate security and performance improvements that meet or exceed
+those of existing techniques.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+
+      <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+              Bloat Factors and Binary Specialization
+            </p>
+            <p>
+			  Anh Quach <em>(Binghamton University)</em>;
+			  Aravind Prakash <em>(Binghamton University)</em>;
+            </p>
+          </div>
+          <div class="ui-li-aside">
+			<!--
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+            <div class="button-paper">
+              <a href="#" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Slides</a>
+            </div>
+			-->
+          </div>
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p> Code bloating in shared code
+modules has been proven pervasive in recent research. However, each
+study provides a different approach to measuring bloat in software. In
+this paper, we propose a system of metrics to effectively quantify
+bloating in binaries. Using them as pointers, we introduce a static
+approach to perform debloating for closed source code applications by
+creating specialized versions of shared libraries depending on how
+they are used by applications as indicated by our bloat factors. We
+conduct an extensive study and calculate bloat factors for over 3000
+Linux applications using 896 shared libraries and provide directions
+for both debloating as well as future library development process. We
+evaluate our debloating technique on large programs and achieve a
+maximum code reduction of 25%.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+
+<!-- 5:30pm -  5:45pm : Closing Remarks -->
+  <li class="ui-li ui-bar-b prog-item ui-li-divider prog-friday   " data-role="list-divider">
+    <h3>5:30pm &ndash; 5:45pm Closing Remarks</h3>
+  </li>
+  <li class="hidden">Closing Remarks</li>
+	  
+  </ul>
+
+
+  
+</div>
+
+
+
 
         </div><!-- content-primary -->
 
