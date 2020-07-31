@@ -70,6 +70,29 @@ function showall(divname) {
     }
 }
 
+/* Show/hide list items on keynotebtn click. */
+function showSpeakers(divname) {
+    var speakerBtn = $.mobile.activePage.find(".keynotebtn");
+
+    if (speakerBtn != null) {
+        $(speakerBtn).find("span").toggleClass("ui-icon-plus ui-icon-minus");
+        let content = $(speakerBtn).find("span").next();
+
+        if ($(speakerBtn).find("span").hasClass('ui-icon-minus')) {
+            $(speakerBtn).siblings().show();
+            $(speakerBtn).find("a").text("Hide Keynote Speaker List");
+        } else {
+            $(speakerBtn).siblings().slice(6).hide();
+            $(speakerBtn).find("a").text("Keynote Speaker List");
+        }
+
+        content.slideToggle(250, function () {
+            // Change text based on condition.
+            return content.is(":visible") ? "Collapse" : "Expand";
+        });
+    }
+}
+
 /* sponsors ticker tape, adapted from sigcomm 2012 code */
 
 (function(a, b) {
