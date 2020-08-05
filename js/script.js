@@ -72,7 +72,7 @@ function showall(divname) {
 
 /* Show/hide list items on keynotebtn click. */
 function showSpeakers(divname) {
-    var speakerBtn = $.mobile.activePage.find(".keynotebtn");
+    let speakerBtn = $.mobile.activePage.find(".keynotebtn");
 
     if (speakerBtn != null) {
         $(speakerBtn).find("span").toggleClass("ui-icon-plus ui-icon-minus");
@@ -80,10 +80,10 @@ function showSpeakers(divname) {
 
         if ($(speakerBtn).find("span").hasClass('ui-icon-minus')) {
             $(speakerBtn).siblings().show();
-            $(speakerBtn).find("a").text("Hide Keynote Speaker List");
+            //$(speakerBtn).find("a").text("Hide Keynote Speaker List");
         } else {
             $(speakerBtn).siblings().slice(6).hide();
-            $(speakerBtn).find("a").text("Keynote Speaker List");
+            //$(speakerBtn).find("a").text("Keynote Speaker List");
         }
 
         content.slideToggle(250, function () {
