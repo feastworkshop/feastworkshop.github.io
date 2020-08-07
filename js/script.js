@@ -85,12 +85,12 @@ function showSpeakers(divname) {
             $(speakerBtn).siblings().slice(6).hide();
             //$(speakerBtn).find("a").text("Keynote Speaker List");
         }
-
-        content.slideToggle(250, function () {
-            // Change text based on condition.
-            return content.is(":visible") ? "Collapse" : "Expand";
-        });
     }
+    let speakerView = $('.speaker-content-preview');
+        speakerView.slideToggle(150, function () {
+            // Change text based on condition.
+            return speakerView.is(":visible") ? "Collapse" : "Expand";
+        });
 }
 
 /* sponsors ticker tape, adapted from sigcomm 2012 code */
