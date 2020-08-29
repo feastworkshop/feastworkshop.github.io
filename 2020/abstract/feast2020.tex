@@ -89,13 +89,14 @@ Software with many features is more likely to appeal to a wider variety of consu
 Software bloat also tends to be synergistic.
 Code designed to be compatible with other software or that incorporates third-party modules must continue to grow with those other products in order to accommodate all their new features.
 
-Unfortunately, software feature growth tends to have an adverse relationship to its security, reliability, and efficiency.
+Unfortunately, software feature growth tends to have an inverse relationship to its security, reliability, and efficiency.
 Each new feature is a new potential point of failure and a new exploitation target for adversaries,
-and high-complexity software tends to have more layers of abstraction and indirection to facilitate feature interaction.
+and high-complexity software tends to have more layers of abstraction and indirection to support feature interactions.
 These disadvantages can be unacceptable for software consumers for whom software security, reliability, and efficiency are paramount,
 such as military, critical infrastructure, and healthcare consumers.
-Such consumers often must nevertheless resort to deploying bloated software with unneeded complexity for critical services for practical reasons,
-such as its affordability, maintainability, compatibility, and availability.
+Such consumers often must nevertheless resort to deploying bloated, closed-source software for practical reasons,
+such as its affordability, maintainability, compatibility, and availability,
+even if they need only a small subset of its functionalities.
 
 Rather than fight these market forces directly, which is unlikely to be effective,
 the FEAST Workshop is devoted to improving the feasibility and effectiveness of \emph{late-state software transformation}.
@@ -125,7 +126,14 @@ Of the 8 submitted works this year, this resulted in 6 acceptances, or an overal
 
 \bio{Ryan Craven}
 is a Program Manager for the Office of Naval Research (ONR),
-where he manages ONR's Total Platform Cyber Protection (TPCP) program.
+where he manages ONR's Total Platform Cyber Protection (TPCP) program~\cite{tpcp}.
+TPCP supports late-stage software customization/specialization and complexity reduction science and technology projects that offer potential for advancement and improvement of security and efficiency of Navy and Marine Corps systems and software.
+Supported projects include research on
+functionality identification and reduction,
+de-bloating and de-layering,
+addition of security constructs,
+verification and validation,
+and approaches that support and complement the above.
 
 \bigskip
 
