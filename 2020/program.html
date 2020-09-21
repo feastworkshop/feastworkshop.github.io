@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta property="og:title" content="FEAST 2020 - FEAST 2020 (ACM CCS workshop)" />
+    <meta property="og:title" content="FEAST 2019 - FEAST 2019 (ACM CCS workshop)" />
     <meta property="og:image" content="https://tc.gtisc.gatech.edu" />
-    <meta property="og:url" content="/2020/program.html" />
+    <meta property="og:url" content="/2019/program.html" />
 
-    <meta property="og:description" content="The 2020 workshop on Forming an Ecosystem Around Software Transformation" />
+    <meta property="og:description" content="The 2019 workshop on Forming an Ecosystem Around Software Transformation" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -28,8 +28,8 @@
     <link rel="manifest" href="/images/favicons/manifest.json">
     <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="/images/favicons/favicon.ico">
-    <meta name="apple-mobile-web-app-title" content="FEAST 2020">
-    <meta name="application-name" content="FEAST 2020">
+    <meta name="apple-mobile-web-app-title" content="FEAST 2019">
+    <meta name="application-name" content="FEAST 2019">
     <meta name="msapplication-config" content="/images/favicons/browserconfig.xml"> 
     <meta name="theme-color" content="#ffffff">
 
@@ -58,7 +58,7 @@
 
       <div class="header" data-role="header" data-theme="a" data-position="inline">
         <div>
-          <a href="/"><img src="/images/logo.png" alt="FEAST 2020"></a>
+          <a href="/"><img src="/images/logo.png" alt="FEAST 2019"></a>
         </div>
         <a href="#" onclick="$.mobile.silentScroll($.mobile.activePage.find('.leftnav').position().top)" id="menu-btn" class="ui-btn-right" data-corners="true" data-icon="grid">MENU</a>
       </div>
@@ -69,11 +69,332 @@
 <p>&nbsp;</p>
 
 
+<div id="prog_ctrl" data-role="navbar">
+  <ul>
+    <li><a href="#" onClick="filter('friday');" class="roundleft">Friday</a></li>
+  </ul>
+</div>
 
-</div><!-- content-primary -->
+<div id="program-program" class="program-program">
+  <ul class="program" data-role="listview" data-filter="true" data-inset="true" data-theme="d" data-dividertheme="a" placeholder="Filter program...">
+
+    <li class="prog-header prog-no-filter ui-bar-a prog-item prog-friday ui-li-static ui-body-inherit">
+      <h3>Friday, November 13, 2020<br>
+		Room: Windsor Lancester (??)
+	  </h3>
+    </li>
+
+    <li class="ui-li ui-bar-b prog-item ui-li-divider prog-friday ui-bar-d" data-role="list-divider" role="heading">
+      <h3>10:00am &ndash; 10:10am Welcome</h3>
+    </li>
+
+    <li class="hidden ui-li-static ui-body-inherit">Welcome</li>
+
+    <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
+      <h3> 10:10am &ndash; 11:00am Keynote 1</h3>
+	  <p>Session/Discussion Lead: TODO <em>(TODO Affiliation)</em></p>	  
+    </li>
+
+    <li class="hidden">Keynote 1</li>
+
+  <!-- Keynote. -->
+  <li data-icon="false" class="prog-item prog-friday prog-keynote">
+    <h2 style="width: 85%"> Keynote: TODO: title</h2>
+
+    <p style="width: 85%">
+      Dr. R. Sekar <em>(Stony Brook University)</em><br/>
+    </p>
+
+    <hr class="keynote-divider" />
+    <p>
+      <b>Abstract: </b> TODO: abstract for presentation here.
+    </p>
+    <p>&nbsp;</p>
+  </li>
+
+  <!-- 10:00 - 10:45am : break1 -->
+  <li class="ui-li ui-bar-b prog-item ui-li-divider prog-friday   " data-role="list-divider">
+  <h3> 11:00am &ndash; 11:20am Break &amp; Discussion</h3>
+  </li>
+  <li class="hidden">Break &amp; Discussion</li>
+
+  <!-- 11:20 - 12:10pm : session1 (75min: 15x4 + 15) -->
+  <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
+	<h3> 11:20am &ndash; 12:10pm Session 1&mdash;Binary Manipulation &amp; Disassembly</h3>
+	<p>Session/Discussion Lead: TODO <em>(TODO Affiliation)</em></p>
+  </li>
+  <li class="hidden">Session 1&mdash;Binary Manipulation &amp; Disassembly</li>
+
+  <!-- Paper presentation item. -->
+  <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+              Binary Quilting to Generate Patched Executables without Compilation
+            </p>
+            <p>
+                Anthony Saieva <em>(Columbia University)</em>;
+                Gail Kaiser <em>(Columbia University)</em>;
+            </p>
+          </div>
+          <!--
+          <div class="ui-li-aside">
+            <div class="button-paper">
+              <a href="https://dl.acm.org/authorize?N698806" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+          </div>
+        -->
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p>
+              When applying patches, or dealing with legacy software, users are often reluctant to change the production executables for fear of unwanted side effects. This results in many active systems running vulnerable or buggy code even though the problems have already been identified and resolved by developers. Furthermore when dealing with old or proprietary software, users can't view or compile source code so any attempts to change the application after distribution requires binary level manipulation. We present a new technique we call binary quilting that allows users to apply the minimum required patch such that production software can be patched preserving existing core semantics without fear of unwanted side effects introduced either by the build process or by additional code changes. Unlike hot patching binary quilting is a one time procedure that creates an entirely new reusable binary. Our case studies show the efficacy of this technique on real software in real patching scenarios.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+ 
+  <!-- Paper presentation item. -->
+  <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+              On the Generation of Disassembly Ground Truth and the Evaluation of Disassemblers
+            </p>
+            <p>
+              Kaiyuan Li <em>(Carnegie Mellon University)</em>;
+              Maverick Woo <em>(Carnegie Mellon University)</em>;
+              Limin Jia <em>(Carnegie Mellon University)</em>;
+            </p>
+          </div>
+          <!--
+          <div class="ui-li-aside">
+            <div class="button-paper">
+              <a href="https://dl.acm.org/authorize?N698894" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+          </div>
+        -->
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p>When a software transformation or software security task needs to analyze or operate on a given program binary, the first step is often disassembly. Since many modern disassemblers have become highly accurate on many binaries, we believe reliable disassembler benchmarking requires standardizing (i) the set of binaries used and (ii) the disassembly ground truth about these binaries. This work proposes a first version of our work-in-progress disassembly benchmark suite, which comprises 879 binaries from diverse projects compiled with multiple compilers and optimization settings. We start by presenting a novel disassembly ground truth generator that relies on “listing files”, with broad support of clang, gcc, icc, and msvc. Then we use our benchmark suite and our custom evaluation system to evaluate 4 prominent open-source disassemblers. Our entire system and all generated data are maintained openly on GitHub to encourage community adoption.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+  
+  <!-- keynote -->
+  <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
+    <h3> 12:10pm &ndash; 1:00pm Keynote 2</h3>
+  <p>Session/Discussion Lead: TODO <em>(TODO Affiliation)</em></p>	  
+  </li>
+
+  <li class="hidden">Keynote 2</li>
+  <li data-icon="false" class="prog-item prog-friday prog-keynote">
+    <h2 style="width: 85%"> Keynote: TODO: title</h2>
+
+    <p style="width: 85%">
+      Dr. A. Loginov <em>(GrammaTech)</em><br/>
+    </p>
+
+    <hr class="keynote-divider" />
+    <p>
+      <b>Abstract: </b> TODO: abstract for presentation here.
+    </p>
+    <p>&nbsp;</p>
+  </li>
+ 
+  <!-- 1:00pm -  2:00pm : lunch -->
+  <li class="ui-li ui-bar-b prog-item ui-li-divider prog-friday   " data-role="list-divider">
+    <h3> 1:00pm &ndash; 2:00pm Lunch Break &amp; Discussion </h3>
+  </li>
+  <li class="hidden">Lunch Break &amp; Discussion</li>
+
+  <!-- 2:00pm - 2:50pm : session2 -->
+  <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
+    <h3> 2:00pm &ndash; 2:50pm Session 2&mdash;Concurrency &amp; Exception Handling</h3>
+    <p>Session/Discussion Lead: TODO <em>(TODO affiliation)</em></p>
+    </li>
+    <li class="hidden">Session 2&mdash;Concurrency &amp; Exception Handling</li>
+  
+    <li data-icon="false" class="prog-item prog-friday">
+        <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+          <h4>
+            <div style="width: 78%">
+              <p class="paper-header">
+                Hunting Garbage Collection Related Concurrency Bugs Through Critical Condition Restoration
+              </p>
+              <p>
+                Hanhan Zhou <em>(George Washington University)</em>;
+                Tian Lan <em>(George Washington University)</em>;
+                Guru Venkataramani <em>(George Washington University)</em>;
+              </p>
+            </div>
+            <!--
+            <div class="ui-li-aside">
+              <div class="button-paper">
+                <a href="https://dl.acm.org/authorize?N698808" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+              </div>
+            </div>
+          -->
+          </h4>
+          <ul data-role="listview" data-inset="false">
+            <li data-icon="false">
+              <p><b>Abstract: </b><p> With the increasing popularity of multicore processors and multi-thread languages/frameworks, race conditions -- which are non-deterministic by nature -- are becoming a main root cause for concurrency bugs. It opens doors to malicious attacks such as remote code execution and denial of service attacks, potentially putting millions of users in danger. Yet, such non-deterministic racing conditions are often difficult to identify or reproduce in standard program testing. In this paper, we focus on the Garbage-Collection (GC) feature, which is known to be a frequent victim of concurrency bugs in many software systems. We develop a new approach to facilitate the testing of GC-related bugs through critical condition restoration. In particular, we propose a risk-score mechanism to quantify the risk of GC-related bugs in target functions and leverage the score to select appropriate testing parameters and garbage generation strategy, with a higher chance of producing the critical condition. Our experimental results show that the proposed approach could significantly improve the probability of finding GC-related bugs (from 0 in condition-oblivious testing to 14.8 bugs identified in our experiment) while incurring only around 26% execution overhead.
+              <p>&nbsp;</p>
+            </li>
+          </ul>
+        </div>
+        </li>
+      
+  <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+              On the Impact of Exception Handling Compatibility on Binary Instrumentation
+            </p>
+            <p>
+              Soumyakant Priyadarshan <em>(Stony Brook University)</em>;
+              Huan Nguyen <em>(Stony Brook University)</em>;
+              R. Sekar <em>(Stony Brook University)</em>;
+            </p>
+          </div>
+          <!--
+          <div class="ui-li-aside">
+            <div class="button-paper">
+              <a href="https://dl.acm.org/authorize?N698805" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+          </div>
+        -->
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p> Static binary instrumentation tools have been facing deployability concerns. One of the major cause of concern is compatibility with C++ exception handling and stack tracing. Although contemporary works identify this as an engineering challenge, there has been no strudy to fully understand the impact of exception handling compatibility on the instrumentation process. To support exception handling compilers generate additional metadata. This metadata can serve as a rich source of information regarding code layout and can simplify various aspects of instrumentation process. In this paper, we show that by exploiting the exception handling metadata, it is possible to achieve 0 false positive in function identification. This paper also evaluates the security implications of this metadata. Attackers can exploit this metadata to gain leverage against code randomization based security hardening techniques.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+  
+  <!-- keynote -->
+  <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
+    <h3> 2:50pm &ndash; 3:40pm Keynote 3</h3>
+  <p>Session/Discussion Lead: TODO <em>(TODO Affiliation)</em></p>	  
+  </li>
+
+  <li class="hidden">Keynote 3</li>
+  <li data-icon="false" class="prog-item prog-friday prog-keynote">
+    <h2 style="width: 85%"> Keynote: TODO: title</h2>
+
+    <p style="width: 85%">
+      Ryan Craven <em>(ONR)</em><br/>
+    </p>
+
+    <hr class="keynote-divider" />
+    <p>
+      <b>Abstract: </b> TODO: abstract for presentation here.
+    </p>
+    <p>&nbsp;</p>
+  </li>
+
+  <li class="ui-li ui-bar-b prog-item ui-li-divider prog-friday   " data-role="list-divider">
+    <h3>3:40pm &ndash; 4:00pm Break &amp; Discussion</h3>
+  </li>
+  <li class="hidden">Break &amp; Discussion</li>
+
+  <!-- 4:00pm - 4:50pm : session3 -->
+    <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
+  <h3> 4:00pm &ndash; 4:50pm Session 3&mdash;Feature Isolation &amp; Exploitation</h3>
+
+  <p>Session/Discussion Lead: TODO <em>(TODO affiliation)</em></p>
+  <li class="hidden">Session 3&mdash;Feature Isolation &amp; Exploitation</li>
+    
+      <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+              Automatic Feature Isolation in Network Protocol Software Implementations
+            </p>
+            <p>
+			      Ze Zhang <em>(University of Michigan)</em>;
+            Qingzhao Zhang <em>(University of Michigan)</em>;
+            Brandon Nguyen <em>(University of Michigan)</em>;
+            Sanjay Sri Vallabh Singapuram <em>(University of Michigan)</em>;
+            Z. Morley Mao <em>(University of Michigan)</em>;
+            Scott Mahlke <em>(University of Michigan/Nvidia Research)</em>;
+            </p>
+          </div>
+          <!--
+          <div class="ui-li-aside">
+            <div class="button-paper">
+              <a href="https://dl.acm.org/authorize?N698893" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+          </div>
+        -->
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p> Common vulnerabilities and exposures (CVE) usually exploit design or implementation flaws of specific features in widely used network protocols, causing serious security and safety threats on full-scale devices and systems. Feature isolation as a general protocol customization practice is shown to be highly promising to reduce attack surfaces in these protocols. In this ongoing work, we propose a systematic approach to achieve automatic feature isolation using various program analysis based techniques. Specifically, we present two methods targeting different feature granularity to automatically identify and remove unnecessary features in a software protocol implementation. In addition, we develop a semantic reconstruction mechanism to enforce user-specified feature access control policies. Preliminary case studies confirm that our proposed techniques can be effectively applied on real-world protocol vulnerabilities.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+
+      <li data-icon="false" class="prog-item prog-friday">
+      <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h4>
+          <div style="width: 78%">
+            <p class="paper-header">
+              Remote Control of iOS Devices via Accessibility Features
+            </p>
+            <p>
+              Nikola Lukic <em>(University of Southern California)</em>;
+              Nenad Medvidovic <em>(University of Southern California)</em>;
+              Saghar Talebipour <em>(University of Southern California)</em>;
+            </p>
+          </div>
+          <!--
+          <div class="ui-li-aside">
+            <div class="button-paper">
+              <a href="https://dl.acm.org/authorize?N698807" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
+            </div>
+          </div>
+        -->
+        </h4>
+        <ul data-role="listview" data-inset="false">
+          <li data-icon="false">
+            <p><b>Abstract: </b><p>This paper presents an approach for remotely accessing and controlling mobile apps by leveraging a mobile platform's publicly exported accessibility features. This approach is implemented in a technique and accompanying tool called <ToolName>. While <ToolName> is designed to be platform-independent, our current implementation has focused on iOS, the significantly more challenging of the two dominant mobile platforms, for which access to apps' source code is generally not possible. We show that <ToolName> places no restrictions on apps it can ``plug into'' and control, is able to handle a variety of scenarios, and imposes a negligible performance overhead.
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+      </div>
+      </li>
+
+<!-- 4:50pm -  5:00pm : Discussion and Closing Remarks -->
+  <li class="ui-li ui-bar-b prog-item ui-li-divider prog-friday   " data-role="list-divider">
+    <h3>4:50pm &ndash; 5:00pm Discussion and Closing Remarks</h3>
+  </li>
+  <li class="hidden">Closing Remarks</li>
+	  
+  </ul>
+
+</div>
+
+
+
+
+        </div><!-- content-primary -->
+
         <div class="leftnav" role="panel" data-position="left" data-display="overlay" data-theme="a">
 
-  <a href="./"><img src="/images/logo.png" alt="FEAST 2020"></a>
+  <a href="./"><img src="/images/logo.png" alt="FEAST 2019"></a>
 
   <ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="a">
 
