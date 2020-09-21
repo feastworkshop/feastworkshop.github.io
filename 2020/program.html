@@ -102,7 +102,7 @@
     <h2 style="width: 85%"> Keynote: TODO: title</h2>
 
     <p style="width: 85%">
-      Dr. R. Sekar <em>(SUNY Stony Brook)</em><br/>
+      Dr. R. Sekar <em>(Stony Brook University)</em><br/>
     </p>
 
     <hr class="keynote-divider" />
@@ -118,12 +118,12 @@
   </li>
   <li class="hidden">Break &amp; Discussion</li>
 
-  <!-- 11:00 - 12:00pm : session1 (75min: 15x4 + 15) -->
+  <!-- 11:20 - 12:10pm : session1 (75min: 15x4 + 15) -->
   <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
-	<h3> 11:20am &ndash; 12:10pm Session 1&mdash;TOPICS HERE</h3>
+	<h3> 11:20am &ndash; 12:10pm Session 1&mdash;Binary Manipulation &amp; Disassembly</h3>
 	<p>Session/Discussion Lead: TODO <em>(TODO Affiliation)</em></p>
   </li>
-  <li class="hidden">Session 1&mdash;TOPICS HERE</li>
+  <li class="hidden">Session 1&mdash;Binary Manipulation &amp; Disassembly</li>
 
   <!-- Paper presentation item. -->
   <li data-icon="false" class="prog-item prog-friday">
@@ -131,24 +131,25 @@
         <h4>
           <div style="width: 78%">
             <p class="paper-header">
-                Source-free Machine-checked Validation of Native Code in Coq
+              Binary Quilting to Generate Patched Executables without Compilation
             </p>
             <p>
-                Kevin W. Hamlen <em>(University of Texas at Dallas)</em>;
-                Dakota Fisher <em>(University of Texas at Dallas)</em>;
-                Gilmore R. Lundquist <em>(University of Texas at Dallas)</em>                
+                Anthony Saieva <em>(Columbia University)</em>;
+                Gail Kaiser <em>(Columbia Universit)</em>;
             </p>
           </div>
+          <!--
           <div class="ui-li-aside">
             <div class="button-paper">
               <a href="https://dl.acm.org/authorize?N698806" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
             </div>
           </div>
+        -->
         </h4>
         <ul data-role="listview" data-inset="false">
           <li data-icon="false">
             <p><b>Abstract: </b><p>
-Picin&aelig; is an infrastructure for machine-proving properties of raw native coe programs without sources within the Coq program-proof co-development system. This facilitates formal reasoning about binary code that is inexpressible in source languages or for which no source code exists, such as hand-written assembly code or code resulting from binary transformations (e.g., binary hardening or debloating algorithms). Preliminary results validating some highly optimized, low-level subroutines for Intel and ARM architectures using this new framework are presented and discussed.
+              When applying patches, or dealing with legacy software, users are often reluctant to change the production executables for fear of unwanted side effects. This results in many active systems running vulnerable or buggy code even though the problems have already been identified and resolved by developers. Furthermore when dealing with old or proprietary software, users can't view or compile source code so any attempts to change the application after distribution requires binary level manipulation. We present a new technique we call binary quilting that allows users to apply the minimum required patch such that production software can be patched preserving existing core semantics without fear of unwanted side effects introduced either by the build process or by additional code changes. Unlike hot patching binary quilting is a one time procedure that creates an entirely new reusable binary. Our case studies show the efficacy of this technique on real software in real patching scenarios.
             <p>&nbsp;</p>
           </li>
         </ul>
@@ -161,31 +162,25 @@ Picin&aelig; is an infrastructure for machine-proving properties of raw native c
         <h4>
           <div style="width: 78%">
             <p class="paper-header">
-              Automated Finite State Machine Extraction
+              On the Generation of Disassembly Ground Truth and the Evaluation of Disassemblers
             </p>
             <p>
-			  Yongheng Chen <em>(NJU, Pennsylvania State University)</em>;
-			  Linhai Song <em>(Pennsylvania State University)</em>;
-			  Xinyu Xing <em>(Pennsylvania State University)</em>;
-			  Fengyuan Xu <em>(National Key Lab for Novel Software Technology, Nanjing University)</em>;
-			  Wenfei Wu <em>(Tsinghua University)</em>;
+              Kaiyuan Li <em>(Carnegie Mellon University)</em>;
+              Maverick Woo <em>(Carnegie Mellon University)</em>;
+              Limin Jia <em>(Carnegie Mellon University)</em>;
             </p>
           </div>
+          <!--
           <div class="ui-li-aside">
             <div class="button-paper">
               <a href="https://dl.acm.org/authorize?N698894" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
             </div>
           </div>
+        -->
         </h4>
         <ul data-role="listview" data-inset="false">
           <li data-icon="false">
-            <p><b>Abstract: </b><p> Finite state machine (FSM) is a
-type of computation models widely used in various software programs.
-Extracting implemented FSMs has many important applications in network, software engineering and security. In this paper, we first study
-how FSMs are implemented in real-world software. We then design a
-static analysis tool, FSMExtractor, to identify and synthesize
-implemented FSMs. Evaluation using 160 software programs shows that
-FSMExtractor can extract FSMs with good coverage and accuracy.
+            <p><b>Abstract: </b><p>When a software transformation or software security task needs to analyze or operate on a given program binary, the first step is often disassembly. Since many modern disassemblers have become highly accurate on many binaries, we believe reliable disassembler benchmarking requires standardizing (i) the set of binaries used and (ii) the disassembly ground truth about these binaries. This work proposes a first version of our work-in-progress disassembly benchmark suite, which comprises 879 binaries from diverse projects compiled with multiple compilers and optimization settings. We start by presenting a novel disassembly ground truth generator that relies on “listing files”, with broad support of clang, gcc, icc, and msvc. Then we use our benchmark suite and our custom evaluation system to evaluate 4 prominent open-source disassemblers. Our entire system and all generated data are maintained openly on GitHub to encourage community adoption.
             <p>&nbsp;</p>
           </li>
         </ul>
@@ -221,48 +216,35 @@ FSMExtractor can extract FSMs with good coverage and accuracy.
 
   <!-- 2:00pm - 2:50pm : session2 -->
   <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
-    <h3> 2:00pm &ndash; 2:50pm Session 2&mdash;TOPICS HERE</h3>
+    <h3> 2:00pm &ndash; 2:50pm Session 2&mdash;Concurrency &amp; Exception Handling</h3>
     <p>Session/Discussion Lead: TODO <em>(TODO affiliation)</em></p>
     </li>
-    <li class="hidden">Session 2&mdash;TOPICS HERE</li>
+    <li class="hidden">Session 2&mdash;Concurrency &amp; Exception Handling</li>
   
     <li data-icon="false" class="prog-item prog-friday">
         <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
           <h4>
             <div style="width: 78%">
               <p class="paper-header">
-                Inuring: Live Attacker-guided Repair
+                Hunting Garbage Collection Related Concurrency Bugs Through Critical Condition Restoration
               </p>
               <p>
-          Eric Schulte <em>(GrammaTech)</em>;
-          Suan Yong <em>(GrammaTech)</em>;
-          David Melski <em>(GrammaTech)</em>;
+                Hanhan Zhou <em>(George Washington University)</em>;
+                Tian Lan <em>(George Washington University)</em>;
+                Guru Venkataramani <em>(George Washington University)</em>;
               </p>
             </div>
+            <!--
             <div class="ui-li-aside">
               <div class="button-paper">
                 <a href="https://dl.acm.org/authorize?N698808" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
               </div>
             </div>
+          -->
           </h4>
           <ul data-role="listview" data-inset="false">
             <li data-icon="false">
-              <p><b>Abstract: </b><p> We present inuring, a method of
-  live attacker-guided repair of software vulnerabilities. We illustrate
-  inuring with an implementation in an N-variant system. When an
-  N-variant system detects an attack by diverging it converts a grave
-  vulnerability, such as one that enables remote code execution, into a
-  less serious denial-of-service vulnerability; the attacker can
-  repeatedly cause divergence, which crashes or forces a reset of the
-  system. Inuring is a general technique that uses information gleaned
-  from an attack to repair the underlying vulnerability, thereby
-  mitigating the denial-of-service vulnerability. Our demonstration of
-  inuring leverages a novel technique of secure memory layout in
-  N-variant systems. We use a weak memory protection technique in each
-  variant, but are able to guarantee strong protection and remediation
-  for the n-variant system. We present a case study application of
-  inuring to the Apache web server demonstrating the efficacy and
-  efficiency of the technique.
+              <p><b>Abstract: </b><p> With the increasing popularity of multicore processors and multi-thread languages/frameworks, race conditions -- which are non-deterministic by nature -- are becoming a main root cause for concurrency bugs. It opens doors to malicious attacks such as remote code execution and denial of service attacks, potentially putting millions of users in danger. Yet, such non-deterministic racing conditions are often difficult to identify or reproduce in standard program testing. In this paper, we focus on the Garbage-Collection (GC) feature, which is known to be a frequent victim of concurrency bugs in many software systems. We develop a new approach to facilitate the testing of GC-related bugs through critical condition restoration. In particular, we propose a risk-score mechanism to quantify the risk of GC-related bugs in target functions and leverage the score to select appropriate testing parameters and garbage generation strategy, with a higher chance of producing the critical condition. Our experimental results show that the proposed approach could significantly improve the probability of finding GC-related bugs (from 0 in condition-oblivious testing to 14.8 bugs identified in our experiment) while incurring only around 26% execution overhead.
               <p>&nbsp;</p>
             </li>
           </ul>
@@ -274,44 +256,25 @@ FSMExtractor can extract FSMs with good coverage and accuracy.
         <h4>
           <div style="width: 78%">
             <p class="paper-header">
-              Exploring Effective Fuzzing Strategies to Analyze Communication Protocols
+              On the Impact of Exception Handling Compatibility on Binary Instrumentation
             </p>
             <p>
-			  Yurong Chen <em>(George Washington University)</em>;
-			  Tian lan <em>(George Washington University)</em>;
-			  Guru Venkataramani <em>(George Washington University)</em>;
+              Soumyakant Priyadarshan <em>(Stony Brook University)</em>;
+              Huan Nguyen <em>(Stony Brook University)</em>;
+              R. Sekar <em>(Stony Brook University)</em>;
             </p>
           </div>
+          <!--
           <div class="ui-li-aside">
             <div class="button-paper">
               <a href="https://dl.acm.org/authorize?N698805" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
             </div>
           </div>
+        -->
         </h4>
         <ul data-role="listview" data-inset="false">
           <li data-icon="false">
-            <p><b>Abstract: </b><p> While coverage-based greybox
-            fuzzing has gained great success in the field of
-            vulnerability detection due to its simplicity and
-            efficiency, it could become less powerful when applied
-            directly to protocol fuzzing due to the unique challenges
-            of protocol fuzzing. In particular, the communication
-            among multiple ends contains more than one packet, which
-            are not necessarily dependent upon each other, i.e.,
-            fuzzing single (usually the first) packet can only achieve
-            extremely limited code coverage. In this paper, we study
-            such challenges and demonstrate the limitation of current
-            non-stateful greybox fuzzer. In order to achieve higher
-            code coverage, we design and implement a stateful,
-            yield-drive protocol fuzzer, yFuzz, to explore the code
-            related to different protocol states. yFuzz is a stateful
-            fuzzer (which contains a state switching engine, together
-            with a multi-state forkserver) to consistently and
-            flexibly fuzz different states of an compiler-instrumented
-            protocol program. Our experimental results on OpenSSL show
-            that yFuzz achieves an improvement of 73% more code
-            coverage and 2X unique crashes when comparing against
-            fuzzing the first packet during a protocol handshake.
+            <p><b>Abstract: </b><p> Static binary instrumentation tools have been facing deployability concerns. One of the major cause of concern is compatibility with C++ exception handling and stack tracing. Although contemporary works identify this as an engineering challenge, there has been no strudy to fully understand the impact of exception handling compatibility on the instrumentation process. To support exception handling compilers generate additional metadata. This metadata can serve as a rich source of information regarding code layout and can simplify various aspects of instrumentation process. In this paper, we show that by exploiting the exception handling metadata, it is possible to achieve 0 false positive in function identification. This paper also evaluates the security implications of this metadata. Attackers can exploit this metadata to gain leverage against code randomization based security hardening techniques.
             <p>&nbsp;</p>
           </li>
         </ul>
@@ -346,52 +309,38 @@ FSMExtractor can extract FSMs with good coverage and accuracy.
 
   <!-- 4:00pm - 4:50pm : session3 -->
     <li class="ui-li ui-bar-a prog-item ui-li-divider prog-friday   " data-role="list-divider">
-  <h3> 4:00pm &ndash; 4:50pm Session 3&mdash;TOPICS HERE</h3>
+  <h3> 4:00pm &ndash; 4:50pm Session 3&mdash;Feature Isolation &amp; Exploitation</h3>
 
   <p>Session/Discussion Lead: TODO <em>(TODO affiliation)</em></p>
-  <li class="hidden">Session 3&mdash;TOPICS HERE</li>
+  <li class="hidden">Session 3&mdash;Feature Isolation &amp; Exploitation</li>
     
       <li data-icon="false" class="prog-item prog-friday">
       <div data-role="collapsible" class="paper-navgroup" data-collapsed="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
         <h4>
           <div style="width: 78%">
             <p class="paper-header">
-              CARVE: Practical Security-Focused Software Debloating Using Simple Feature Set Mappings
+              Automatic Feature Isolation in Network Protocol Software Implementations
             </p>
             <p>
-			  Michael Brown <em>(Georgia Tech Research Institute)</em>;
-			  Santosh Pande <em>(Georgia Tech)</em>;
+			      Ze Zhang <em>(University of Michigan)</em>;
+            Qingzhao Zhang <em>(University of Michigan)</em>;
+            Brandon Nguyen <em>(University of Michigan)</em>;
+            Sanjay Sri Vallabh Singapuram <em>(University of Michigan)</em>;
+            Z. Morley Mao <em>(University of Michigan)</em>;
+            Scott Mahlke <em>(University of Michigan/Nvidia Research)</em>;
             </p>
           </div>
+          <!--
           <div class="ui-li-aside">
             <div class="button-paper">
               <a href="https://dl.acm.org/authorize?N698893" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
             </div>
           </div>
+        -->
         </h4>
         <ul data-role="listview" data-inset="false">
           <li data-icon="false">
-            <p><b>Abstract: </b><p> Software debloating is an emerging
-field of study aimed at improving the security and performance of
-software by removing excess library code and features that are not
-needed by the end user (called bloat). Software bloat is pervasive,
-and several debloating techniques have been proposed to address this
-problem. While these techniques are effective at reducing bloat, they
-are not practical for the average user, risk creating unsound programs
-and introducing vulnerabilities, and are not well suited for
-debloating complex software such as network protocol implementations.
-In this paper, we propose CARVE, a simple yet effective
-security-focused debloating technique that overcomes these
-limitations. CARVE employs static source code annotation to map
-software features source code, eliminating the need for advanced
-software analysis during debloating and reducing the overall level of
-technical sophistication required by the user. CARVE surpasses
-existing techniques by introducing debloating with replacement, a
-technique capable of preserving software interoperability and
-mitigating the risk of creating an unsound program or introducing a
-vulnerability. We evaluate CARVE in 12 debloating scenarios and
-demonstrate security and performance improvements that meet or exceed
-those of existing techniques.
+            <p><b>Abstract: </b><p> Common vulnerabilities and exposures (CVE) usually exploit design or implementation flaws of specific features in widely used network protocols, causing serious security and safety threats on full-scale devices and systems. Feature isolation as a general protocol customization practice is shown to be highly promising to reduce attack surfaces in these protocols. In this ongoing work, we propose a systematic approach to achieve automatic feature isolation using various program analysis based techniques. Specifically, we present two methods targeting different feature granularity to automatically identify and remove unnecessary features in a software protocol implementation. In addition, we develop a semantic reconstruction mechanism to enforce user-specified feature access control policies. Preliminary case studies confirm that our proposed techniques can be effectively applied on real-world protocol vulnerabilities.
             <p>&nbsp;</p>
           </li>
         </ul>
@@ -403,34 +352,25 @@ those of existing techniques.
         <h4>
           <div style="width: 78%">
             <p class="paper-header">
-              Bloat Factors and Binary Specialization
+              Remote Control of iOS Devices via Accessibility Features
             </p>
             <p>
-			  Anh Quach <em>(Binghamton University)</em>;
-			  Aravind Prakash <em>(Binghamton University)</em>;
+              Nikola Lukic <em>(University of Southern California)</em>;
+              Nenad Medvidovic <em>(University of Southern California)</em>;
+              Saghar Talebipour <em>(University of Southern California)</em>;
             </p>
           </div>
+          <!--
           <div class="ui-li-aside">
             <div class="button-paper">
               <a href="https://dl.acm.org/authorize?N698807" onclick="event.stopPropagation();" rel="external" target="_blank" class="ui-link">Paper</a>
             </div>
           </div>
+        -->
         </h4>
         <ul data-role="listview" data-inset="false">
           <li data-icon="false">
-            <p><b>Abstract: </b><p> Code bloating in shared code
-modules has been proven pervasive in recent research. However, each
-study provides a different approach to measuring bloat in software. In
-this paper, we propose a system of metrics to effectively quantify
-bloating in binaries. Using them as pointers, we introduce a static
-approach to perform debloating for closed source code applications by
-creating specialized versions of shared libraries depending on how
-they are used by applications as indicated by our bloat factors. We
-conduct an extensive study and calculate bloat factors for over 3000
-Linux applications using 896 shared libraries and provide directions
-for both debloating as well as future library development process. We
-evaluate our debloating technique on large programs and achieve a
-maximum code reduction of 25%.
+            <p><b>Abstract: </b><p>This paper presents an approach for remotely accessing and controlling mobile apps by leveraging a mobile platform's publicly exported accessibility features. This approach is implemented in a technique and accompanying tool called <ToolName>. While <ToolName> is designed to be platform-independent, our current implementation has focused on iOS, the significantly more challenging of the two dominant mobile platforms, for which access to apps' source code is generally not possible. We show that <ToolName> places no restrictions on apps it can ``plug into'' and control, is able to handle a variety of scenarios, and imposes a negligible performance overhead.
             <p>&nbsp;</p>
           </li>
         </ul>
