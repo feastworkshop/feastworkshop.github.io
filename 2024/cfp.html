@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta property="og:title" content="Call for Papers - FEAST 2017 (ACM CCS workshop)" />
+    <meta property="og:title" content="Call for Papers - FEAST 2024 (ACM CCS workshop)" />
     <meta property="og:image" content="https://tc.gtisc.gatech.edu" />
-    <meta property="og:url" content="/2020/cfp.html" />
+    <meta property="og:url" content="/2024/cfp.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,7 +12,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="copyright" content="This site inherents designs and contents from https://github.com/cawka/SIGCOMM2017 and https://github.com/apietila/SIGCOMM2016" />
 
-    <title>Call for Papers - FEAST 2020 (ACM CCS workshop)</title>
+    <title>Call for Papers - FEAST 2024 (ACM CCS workshop)</title>
 
     <!-- fonts -->
     <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
@@ -26,8 +26,8 @@
     <link rel="manifest" href="/images/favicons/manifest.json">
     <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="/images/favicons/favicon.ico">
-    <meta name="apple-mobile-web-app-title" content="FEAST 2020">
-    <meta name="application-name" content="FEAST 2020">
+    <meta name="apple-mobile-web-app-title" content="FEAST 2024">
+    <meta name="application-name" content="FEAST 2024">
     <meta name="msapplication-config" content="/images/favicons/browserconfig.xml"> 
     <meta name="theme-color" content="#ffffff">
 
@@ -56,72 +56,77 @@
 
       <div class="header" data-role="header" data-theme="a" data-position="inline">
         <div>
-          <a href="./"><img src="/images/logo.png" alt="FEAST 2020"></a>
+          <a href="./"><img src="/images/logo.png" alt="FEAST 2024"></a>
         </div>
         <a href="#" onclick="$.mobile.silentScroll($.mobile.activePage.find('.leftnav').position().top)" id="menu-btn" class="ui-btn-right" data-corners="true" data-icon="grid">MENU</a>
       </div>
 
       <div data-role="content" class="ui-content">
         <div class="content-primary">
-          <h1 id="call-for-papers">Call for Papers</h1>
+          <h1 id="call-for-papers">FEAST 24 Call for Papers</h1>
 
-<p>The 5th Workshop on FEAST seeks submissions presenting novel contributions, works in progress, position papers, challenge papers, and systematization of knowledge papers concerning all aspects of late-stage customization and analysis of binary executable software for security. Authors are encouraged to submit papers that will foster discussion and highlight emerging challenges and novel approaches to achieving effective, robust transformation and analysis of binary code with little or no reliance on source code.</p>
+<p>The 6th Workshop on FEAST is a reinvigoration of the series, with the original five events taking place from
+  2016-2020. FEAST is concerned with all aspects of achieving effective, robust, and appraisable late-stage
+  transformation of software for security. Late-stage transformation and customizations allow third
+  parties besides the original developer to deeply tailor existing software to their mission, with little or no
+  access to source code and other development artifacts besides the executables.</p>
 
-<p>Typical software engineering methodologies are largely focused on
-programmer productivity for delivering general-purpose software to the widest possible set of consumers. While this approach maximizes profits, it tends to yield software that is bloated with features that might pose unnecessary risks for security-sensitive consumers, code that is unnecessarily inefficient in terms of time and space overheads, and/or software that sacrifices security and reliability assurances.</p>
+<p>Typical software engineering methodologies are largely driven by the need to maximize programmer
+  productivity. A combination of expensive developers and cheap complexity has yielded a stubborn
+  reality where a course-grained and opportunistic approach to code reuse meets a myriad of abstraction
+  layers that defies analysis and undermines security. Many highly damaging critical software
+  vulnerabilities, e.g., Log4Shell or ForcedEntry, were originally delivered as features in diversely used
+  software components designed to satisfy the widest possible set of consumers. Consumers of these
+  components require a vibrant ecosystem of tools and techniques that enables them to tailor to their
+  individual needs.</p>
 
-<p>Recent work has sought to undo these disadvantages by innovating facilities for (semi-)automatically analyzing and customizing the binary code purveyed by software vendors without reliance on developer-owned source code. Customizations of interest include (but are not limited to)
-program specialization (de-bloating),
-reduction of levels of indirection (de-layering),
-control-flow and dataflow simplification (complexity reduction),
-binary optimizations related to the above (streamlining),
-and techniques for achieving higher assurance for customized code (e.g., formal methods).
-Numerous promising results from these efforts have demonstrated their viability for improving program execution efficiency as well as reduction of the cyber security attack surface.
-Further advances in these areas will benefit the community by investing in the development of tool ecosystems to take advantage of this recent progress, to mature the technologies, and to determine how best to transparently deploy them.</p>
+<p>Recent work has led to successful innovations toward these aims, with improvements to the analysis
+  and customization of binary code, bytecode representations of interpreted languages, container
+  environments, and OS kernels. Customizations include (but are not limited to): program specialization
+  (debloating), reduction of indirection (delayering), control flow and data flow simplification (complexity
+  reduction), and techniques for establishing higher assurance of customized code (e.g., formal methods).
+  These efforts have enabled a powerful means to reduce the cyber security attack surface.</p>
 
-<p><a href="FEAST_2020_CFP.pdf" data-role="button" class="button">Call For Papers (PDF)</a></p>
+<p>Despite this ongoing progress within the research community, software executable transformation is
+  not a solved science. Some critical problems of reverse engineering and binary analysis are provably
+  undecidable in the general case and we lack guarantees about the effectiveness and correctness of
+  transformation efforts. Existing measurement and assessment techniques fail to capture the true value
+  of the positive impact to mission availability. Further advances in these areas will benefit the
+  community by maturing the ecosystem of technologies, to determine how best to transparently deploy
+  them, and to study how to more properly appraise their impacts operationally so as to influence and
+  inform system designers and security decision makers.</p>
+
+<p><a href="" data-role="button" class="button">Call For Papers (PDF)</a></p>
 
 <h2 id="scope">Scope</h2>
 
-<p>Despite this ongoing progress within the research
-community, software executable transformation is not a solved science.
-Some critical problems of reverse engineering and
-binary analysis are provably undecidable in the general case.  Various
-automated tools and ecosystems still need to be investigated
-and developed to guarantee the effectiveness and
-correctness of transformation efforts, and to enhance and ensure the
-security of transformed software.
-In addition, emerging challenges deserving special attention of the research community must be identified, and the relative merits of existing knowledge must be systematized.
-The FEAST workshop will include
- topics geared toward:</p>
-
+<p>The FEAST workshop will include topics geared toward:</p>
 <ul>
-  <li>understanding issues of software executable transformation for
-various programming languages and environment, and the potential
-methods for alleviating those issues;</li>
-  <li>identification of tools to be
-investigated and developed for guaranteeing correctness, enhancing
-security, and enabling non-critical, undesired feature removal;</li>
-  <li>identification of layers and areas of computing systems that are
-suitable for (and can benefit from) software
-customization/transformation, along with the identification of
-associated challenges and constraints, and the particular
-adaptation to the methodology needed to operate within the
-identified areas; and</li>
-  <li>automated extraction of models from software
-executables that are amenable to formal methods analysis and
-verification.</li>
+  <li>Understanding issues of software executable transformation for various programming languages and
+  environments, and the potential methods for alleviating those issues</li>
+  <li style="padding-top: 1em;">Designing holistically more effective transforms that tolerate incomplete and imprecise specifications,
+  and identify layers and components that are suitable for (and can benefit from) software customization</li>
+  <li style="padding-top: 1em;">Developing techniques for reasoning about the correctness and robustness of transformed software,
+  enhancing differential testing, and predicting transform quality or other constraints</li>
+  <li style="padding-top: 1em;">Investigating novel means of appraising the improvements made to the various goals the user had in
+  conducting the transform, and new metrics to reason about security impacts</li>
 </ul>
 
-<p><a href="mailto:l.lu@northeastern.edu" data-role="button" class="button">Contact Program Committee Chairs</a></p>
+<p><a href="tpc.html" data-role="button" class="button">Contact Program Committee Chairs</a></p>
 
 <h2 id="submissions">Submissions</h2>
 
-<p>Submissions should be in two-column, 10-point format, double-blind,
-and can be up to 6 pages in length with
-as many additional pages as necessary for references.
-Authors should submit their papers at
-<a href="https://feast20.hotcrp.com">https://feast20.hotcrp.com</a>.</p>
+<p>We invite proposals to give a talk at the workshop related to a topic within scope. The submitted talk
+  proposals do not have to be as formal as a typical paper. The proposal should adequately describe the
+  points to be made in the talk such that the PC can make a determination on acceptance.</p>
+
+<p>The objective of FEAST organizers is to provide a lively and thought-provoking technical program that
+  helps drive in-person discussion at the workshop. Talks that further discussion could include:
+  presentation of early research results, position talks, outlining of challenges / opportunities, lessons
+  learned from deployment experience, or Systematization of Knowledge (SoK) papers.</p>
+  
+<p>Submissions can be up to 6 pages in length including references with a minimum 10 point font size.
+  Authors should submit their papers at <a href="">HOTCRP COMING SOON</a></p>
 
 <h2 id="-important-dates"><i class="fa fa-calendar"></i> Important dates</h2>
 
@@ -132,8 +137,8 @@ Authors should submit their papers at
 
       <li data-icon="false">
         <div class="ui-grid-a">
-          <div class="ui-block-a"><h2>July <s>17</s> 24, 2020 <a href="https://time.is/Anywhere_on_Earth">AOE</a></h2></div>
-          <div class="ui-block-b"><p>Submission Deadline</p> </div>
+          <div class="ui-block-a"><h2>July 17, 2024 <a href="https://time.is/Anywhere_on_Earth">AOE</a></h2></div>
+          <div class="ui-block-b"><p>Submission Deadline for Talk Proposals</p> </div>
         </div>
       </li>
 
@@ -143,8 +148,8 @@ Authors should submit their papers at
 
       <li data-icon="false">
         <div class="ui-grid-a">
-          <div class="ui-block-a"><h2>August 12, 2020</h2></div>
-          <div class="ui-block-b"><p>Notification</p></div>
+          <div class="ui-block-a"><h2>August 5, 2024</h2></div>
+          <div class="ui-block-b"><p>Acceptance Notifications</p></div>
         </div>
       </li>
 
@@ -154,7 +159,7 @@ Authors should submit their papers at
 
       <li data-icon="false">
         <div class="ui-grid-a">
-          <div class="ui-block-a"><h2>September 2, 2020</h2></div>
+          <div class="ui-block-a"><h2>September 5, 2024</h2></div>
           <div class="ui-block-b"><p>Submission of Camera Ready Papers to Publisher</p></div>
         </div>
       </li>
@@ -165,8 +170,8 @@ Authors should submit their papers at
 
       <li data-icon="false">
         <div class="ui-grid-a">
-          <div class="ui-block-a"><h2>November 13, 2020</h2></div>
-          <div class="ui-block-b"><p>Main Conference Technical Program </p></div>
+          <div class="ui-block-a"><h2>October 18, 2024</h2></div>
+          <div class="ui-block-b"><p>FEAST Workshop Technical Program</p></div>
         </div>
       </li>
 
@@ -177,7 +182,7 @@ Authors should submit their papers at
 
         <div class="leftnav" role="panel" data-position="left" data-display="overlay" data-theme="a">
 
-          <a href="./"><img src="/images/logo.png" alt="FEAST 2020"></a>
+          <a href="./"><img src="/images/logo.png" alt="FEAST 2024"></a>
 
   <ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="a">
 
