@@ -1,0 +1,214 @@
+\documentclass[sigconf]{acmart}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage{enumitem}
+
+% This block is copied from the e-mail you get after completing the eRights form
+\copyrightyear{2024}
+\acmYear{2024}
+\setcopyright{rightsretained}
+\acmConference[CCS '24]{Proceedings of the 2024 ACM SIGSAC Conference on Computer and Communications Security}{October 14--18, 2024}{Salt Lake City, UT, USA}
+\acmBooktitle{Proceedings of the 2024 ACM SIGSAC Conference on Computer and Communications Security (CCS '24), October 14--18, 2024, Salt Lake City, UT, USA}
+\acmDOI{10.1145/3658644.3691553}
+\acmISBN{979-8-4007-0636-3/24/10}
+
+\settopmatter{printacmref=true}
+
+\pdfadjustspacing=2
+
+\newcommand\bio[1]{\noindent\textbf{#1}}
+
+\begin{document}
+\fancyhead{}
+
+\title[FEAST'24]{FEAST'24: Sixth Workshop on Forming an Ecosystem Around Software Transformation}
+
+\author{Ryan Craven}
+\affiliation{%
+  \institution{Office of Naval Research}
+  \city{Arlington}
+  \state{Virginia}
+  \country{USA}
+}
+\email{ryan@rcraven.net}
+
+\author{Matthew Mickelson}
+\affiliation{%
+  \institution{MITRE}
+  \city{McLean}
+  \state{Virginia}
+  \country{USA}
+}
+\email{mmickelson@mitre.org}
+
+% Required for even page headers
+\renewcommand{\shortauthors}{Ryan Craven and Matthew Mickelson}
+
+\begin{abstract}
+The Sixth Workshop on Forming an Ecosystem Around Software Transformation (FEAST)
+is a reinvigoration of the series, with the original five events taking place from 2016-2020.
+FEAST is concerned with all aspects of achieving effective, robust, and appraisable late-stage
+transformation of software for security. Late-stage transformation and customizations allow
+third parties besides the original developer to deeply tailor existing software to their mission,
+with little or no access to source code and other development artifacts besides the executables.
+
+Research has shown that late-stage software customization is of particular benefit to security-conscious
+software consumers who must use closed-source or source-free binary software components in mission-critical settings,
+or who must harden software against newly emerging attacks not anticipated during the software's original design and development.
+However, there is still a long way to go toward achieving sound and robust transformations whose
+holistic benefits to deployed software are fully appraisable.
+Motivated by these outstanding challenges, FEAST continues in its goal to form an active ecosystem of strategies and tools
+for accomplishing source-free binary code transformation reliably and on-demand.
+\end{abstract}
+
+% CCS Concepts code generated from https://dl.acm.org/ccs
+\begin{CCSXML}
+  <ccs2012>
+  <concept>
+  <concept_id>10002978.10003022</concept_id>
+  <concept_desc>Security and privacy~Software and application security</concept_desc>
+  <concept_significance>500</concept_significance>
+  </concept>
+  <concept>
+  <concept_id>10011007.10011074.10011111</concept_id>
+  <concept_desc>Software and its engineering~Software post-development issues</concept_desc>
+  <concept_significance>500</concept_significance>
+  </concept>
+  </ccs2012>
+\end{CCSXML}
+  
+\ccsdesc[500]{Security and privacy~Software and application security}
+\ccsdesc[500]{Software and its engineering~Software post-development issues}
+
+% Separating your keywords; with semi-colons; is mandatory
+\keywords{binary software; software debloating; software de-layering; software security hardening; binary rewriting; software transformation}
+
+\maketitle
+
+\section{Introduction}
+It is 2024, and software is more bloated than ever~\cite{hubert2024}.  Since the
+most recent FEAST in 2020, software size has continued to climb at an
+exponential rate. The proliferation of "smart" features into everyday consumer
+products has carried along with it a need for manufacturers across all
+industries to rapidly ship complex software functionality out to a host of
+cost-sensitive products. Nowhere has the change been more dramatic than the auto
+industry, where even low-end vehicles can have 100 ECUs and 100 million of lines
+of code, and advances in autonomous driving functions hold the potential for
+some new cars to push the 500 million lines of code mark~\cite{charette2021}.
+That would place an amount of code equal to one quarter the size of all the
+software running Google's \emph{entire} internet services catalog ten years
+ago~\cite{potvin2015}, into every family vehicle.
+
+While economics have always driven developers to ship software with lots of
+features for broad appeal, it is the advancement of efficient and easy-to-use
+code reuse practices along with the powerful gains they deliver to programmer
+productivity that enable the explosive growth we see.  We find it important to
+stress that maximizing code reuse is not itself a bad thing: consumers and
+businesses benefit from a rapid pace of less expensive, more feature-rich
+products, and developers spend their limited time more efficiently.  But there
+is a growing problem that security-conscious consumers know all too well: most
+of the code in any modern system is unnecessary or even potentially undesirable
+to its users~\cite{quach2017}.  One study found that, on average, only 10\% of
+the functions in the most frequently used shared libraries in Ubuntu are ever
+invoked by common programs~\cite{quach2018}.
+
+Identifying when unneeded or undesirable code is being added to a system is
+difficult, due in large part to an enormous amount of complexity that gets
+hidden behind slick abstractions: frameworks, middlewares, container
+orchestration, and so many libraries that today's popular languages all need
+their own package managers just to make things manageable~\cite{dusing2022}.  We
+expect these conditions will persist, as the cost of the complexity seems cheap
+compared to the value gained. The costs, however, are only thought to be cheap
+because the market measures them at \emph{development time}, where all the
+benefits (increased productivity resulting from the code reuse and abstractions)
+are being gained.
+
+The costs that come later (increased maintenance, features that later become
+bugs, expanded attack surfaces, and opaque software supply chains) are difficult
+to capture, and are experienced differently by various segments of consumers.
+Described in the most succinct terms, FEAST is a recognition of these costs.  
+Rather than fight market forces directly, which is unlikely to be effective, the
+FEAST Workshop is devoted to improving the feasibility and effectiveness of
+\emph{late-state software transformation}. Late-stage transformations modify
+low-level software after it has been designed, developed, and compiled into a
+distributable product. Such technologies offer consumers the ability to
+customize software to their particular requirements, such as by removing
+unneeded features, stripping out unnecessary complexity, or adding hardened
+security defenses against dangerous attacks. Source-free software transformation
+challenges of particular interest include:
+\begin{itemize}[itemsep=.5ex plus1pt minus0pt]
+  \item \textbf{software debloating}, which concerns the removal of software behaviors, code, or data that is unneccessary for a given consumer's needs;
+  \item \textbf{software de-layering}, which removes levels of indirection or abstraction layers that impede efficiency;
+  \item \textbf{software security hardening}, which concerns adding extra security checks and other defenses to code in order to thwart attacks;
+  \item \textbf{post-deployment patching}, which allows binary code to be more easily modified to replace or remove functionalities;
+  \item \textbf{attack surface discovery and reduction}, which discovers and mitigates potential opportunities for abuse and compromise of binary software products;
+  \item \textbf{software self-healing}, which transforms software to detect and remediate faults unanticipated by its authors;
+  \item \textbf{transformation-aware reverse-engineering}, which lifts low-level software to a higher-level form amenable to analysis, transformed, and then lowered back to executable form without sacrificing efficiency; and
+  \item \textbf{low-level formal methods}, which extend automated theorem proving, model-checking, and type-based verification typically used at the source level for high assurance code down to executable binaries.
+\end{itemize}
+
+The goal of FEAST is to cultivate a robust ecosystem of these and other
+technologies relevant to practical, effective customization of binary software
+without the aid of source code or developer support.
+
+\subsection{The Continuing Need for FEAST}
+In the time since FEAST'20 was held, numerous motivating events have occurred.
+In 2021, an obscure feature that had been added to the Log4j library
+almost eight years prior initiated a global cybersecurity emergency.  This was
+due to one user of the library adding a feature (support for JNDI lookups) to
+make their life more convenient, with the patch being committed by the
+maintainers less than 24 hours later~\cite{jndiflaw}.  Observing a lack of
+scrutiny across the widespread scale of code reuse, attackers began more
+heavily targeting overworked package maintainers~\cite{duan2021}, leading to a
+coordinated multi-year operation against the maintainer of XZ Utils compression
+library~\cite{xzutils}. The Sunburst malware was discovered to have been hiding
+in Solarwinds Orion software for months undetected~\cite{sunburst}. And
+unnecessary support for obscure image formats led to a zero-click vulnerability
+in iMessage~\cite{forcedentry}.
+
+The rapid and pervasive adoption of AI coding assistants is already having broad
+effects on how software is built and deployed~\cite{klemmer2024}.  It is
+possible that complexity and opacity increase another level as new technology
+leads to changes in behaviors.  For instance, LLM hallucinations of package
+library names were observed being used in the wild~\cite{lanyado2024}. As we
+progress toward FEAST's goal of practical and effective customization of binary
+software, consumers that bear a larger burden from the offset costs of
+increasing size and complexity will benefit as they become empowered to exert
+more rigor over and reshape the software they deploy.
+
+\section{Sixth Workshop Program}
+The sixth FEAST workshop consists of four full paper presentations, and ten talk
+proposal presentations.  Full papers were submitted to the official proceedings, while
+talk proposals were not.  Talk proposals were a lighter-lift submission that enabled
+the workshop to incorporate more diverse perspectives.
+
+The presentations are organized into four sessions, each with a different theme
+tied to a property about late-stage transformations that we seek to improve:
+Soundness, Robustness, Appraisability, and Enabling Technology.
+
+\section{Workshop Organization}
+The following program committee members helped organize the 2024 FEAST Workshop:
+\begin{itemize}
+  \item Ryan Craven (Office of Naval Research)
+  \item Matthew Mickelson (MITRE)
+  \item Jason Li (Trusted ST)
+  \item Sukarno Mertoguno (Georgia Tech)
+  \item Daniel Koller (Pennsylvania State University)
+  \item Nathan Burow (MIT Lincoln Laboratory)
+\end{itemize}
+
+\section{Acknowledgments}
+The workshop chairs for FEAST'24 wish to thank all authors for submitting papers,
+as well as past chairs
+Taesoo Kim, Dinghao Wu,
+Yan Shoshitaishvili, Mayur Naik,
+Adam Doup\'e, Zhiqiang Lin,
+Long Lu, and Kevin Hamlen
+for their stewardship of the FEAST community over the years.
+
+\bibliographystyle{ACM-Reference-Format}
+\balance
+\bibliography{references}
+
+\end{document}
+
