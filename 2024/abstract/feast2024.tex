@@ -154,11 +154,11 @@ without the aid of source code or developer support.
 \subsection{The Continuing Need for FEAST}
 In the time since FEAST'20 was held, numerous motivating events have occurred.
 In 2021, an obscure feature that had been added to the Log4j library
-almost eight years prior initiated a global cybersecurity emergency.  This was
+almost eight years prior initiated a global cybersecurity emergency~\cite{cisalog4j}.  This was
 due to one user of the library adding a feature (support for JNDI lookups) to
 make their life more convenient, with the patch being committed by the
-maintainers less than 24 hours later~\cite{jndiflaw}.  Observing a lack of
-scrutiny across the widespread scale of code reuse, attackers began more
+maintainers less than 24 hours later~\cite{jndiflaw}.  Seeing the lack of
+scrutiny going into widespread code reuse, attackers began more
 heavily targeting overworked package maintainers~\cite{duan2021}, leading to a
 coordinated multi-year operation against the maintainer of XZ Utils compression
 library~\cite{xzutils}. The Sunburst malware was discovered to have been hiding
@@ -167,8 +167,8 @@ unnecessary support for obscure image formats led to a zero-click vulnerability
 in iMessage~\cite{forcedentry}.
 
 The rapid and pervasive adoption of AI coding assistants is already having broad
-effects on how software is built and deployed~\cite{klemmer2024}.  It is
-possible that complexity and opacity increase another level as new technology
+effects on how software is built and deployed~\cite{klemmer2024}.  One
+possibility is that complexity and opacity increase another level as the new technology
 leads to changes in behaviors.  For instance, LLM hallucinations of package
 library names were observed being used in the wild~\cite{lanyado2024}. As we
 progress toward FEAST's goal of practical and effective customization of binary
